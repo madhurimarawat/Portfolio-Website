@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #FFFFF0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header {
+    background-color: #6cb2eb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header p {
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+header .contact a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+header .contact a:hover {
+    text-decoration: underline;
+    text-align: center;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section h2 {
+    border-bottom: 2px solid #6cb2eb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.experience-item,
+.project-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+    padding-left: 20px;
+    text-align: center;
+}
+
+ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ul li a {
+    color: #6cb2eb;
+    text-decoration: none;
+    text-align: center;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.contact a i {
+    margin-right: 5px;
+    text-align: center;
+}
+
+/* Add card transform and shadow effect */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFF0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+    /* Remove default padding */
+    list-style-position: inside;
+    /* Move bullets inside the content box */
+    text-align: center;
+    /* Center align the text */
+}
+
+ul li {
+    display: inline-block;
+    /* Display list items as inline blocks */
+    text-align: center;
+    /* Align text within the inline-blocks */
+    margin-bottom: 10px;
+    width: 100%;
+    /* Ensure the li spans the full width */
+}
