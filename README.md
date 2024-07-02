@@ -3,13 +3,13 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <h2>Website Design</h2>
 
-![Screenshot 2024-07-02 114717](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/59f2a79d-7913-4f63-881b-695b4810eec6)
+<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114717](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/59f2a79d-7913-4f63-881b-695b4810eec6)</a>
 
-![Screenshot 2024-07-02 114737](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/31ce779d-5230-4301-8d52-ab5cf53fefca)
+<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114737](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/31ce779d-5230-4301-8d52-ab5cf53fefca)</a>
 
-![Screenshot 2024-07-02 114751](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/4cbe7452-0b55-4529-9032-59bee4f63ab5)
+<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114751](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/4cbe7452-0b55-4529-9032-59bee4f63ab5)</a>
 
-![Screenshot 2024-07-02 114814](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/958e1603-eeeb-4463-af36-7563877c20f6)
+<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114814](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/958e1603-eeeb-4463-af36-7563877c20f6)</a>
 
 ## Technology Used 💻
 
