@@ -1,3 +1,4 @@
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
     text-align: center;
 }
 
+/* Header styling */
 header {
     background-color: #6cb2eb;
     color: white;
@@ -15,16 +17,19 @@ header {
     text-align: center;
 }
 
+/* Styling for header h1 */
 header h1 {
     margin: 0;
     text-align: center;
 }
 
+/* Styling for header p */
 header p {
     margin: 5px 0 10px;
     text-align: center;
 }
 
+/* Styling for contact links in header */
 header .contact a {
     color: white;
     margin: 0 10px;
@@ -33,11 +38,13 @@ header .contact a {
     text-align: center;
 }
 
+/* Hover effect for contact links in header */
 header .contact a:hover {
     text-decoration: underline;
     text-align: center;
 }
 
+/* Section styling */
 section {
     margin: 20px;
     padding: 20px;
@@ -50,6 +57,7 @@ section {
     text-align: center;
 }
 
+/* Styling for section h2 */
 section h2 {
     border-bottom: 2px solid #6cb2eb;
     padding-bottom: 10px;
@@ -57,6 +65,7 @@ section h2 {
     text-align: center;
 }
 
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -64,52 +73,61 @@ table {
     text-align: center;
 }
 
+/* Styling for table cells */
 table th,
 table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
     text-align: center;
+    /* redundant, removed */
 }
 
+/* Styling for table headers */
 table th {
     background-color: #f2f2f2;
     text-align: center;
 }
 
+/* Styling for experience and project items */
 .experience-item,
 .project-item {
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Styling for unordered lists */
 ul {
     padding-left: 20px;
     text-align: center;
 }
 
+/* Styling for list items in unordered lists */
 ul li {
     margin-bottom: 10px;
     text-align: center;
 }
 
+/* Styling for links within list items */
 ul li a {
     color: #6cb2eb;
     text-decoration: none;
     text-align: center;
 }
 
+/* Hover effect for links within list items */
 ul li a:hover {
     text-decoration: underline;
     text-align: center;
 }
 
+/* Styling for icons in the contact section */
 .contact a i {
     margin-right: 5px;
     text-align: center;
 }
 
-/* Add card transform and shadow effect */
+/* Card styling */
 .card {
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,12 +136,14 @@ ul li a:hover {
     background-color: #FFFFF0;
 }
 
+/* Hover effect for cards */
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
+/* Additional styling for unordered lists */
 ul {
     padding-left: 0;
     /* Remove default padding */
@@ -133,6 +153,7 @@ ul {
     /* Center align the text */
 }
 
+/* Styling for list items in unordered lists */
 ul li {
     display: inline-block;
     /* Display list items as inline blocks */
