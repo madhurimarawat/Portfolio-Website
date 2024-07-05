@@ -58,9 +58,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 ## Website Link
 
-<p>I have hosted this Website using netlify.Click on the Link below to have a look at my Website:</p>
-
-<a href="https://madhurima-rawat-portfolio.netlify.app/">🌟Portfolio Website💻</a>
+<p>I have hosted this Website using <a href="https://madhurima-rawat-portfolio.netlify.app/">Netlify</a>  and  <a href = "https://madhurimarawat.github.io/Portfolio-Website/">Github Pages</a>. Click on the Link to have a look at my Website.</p>
 
 ---
 ## Additional Resources 
