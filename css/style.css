@@ -1,3 +1,4 @@
+/* Styling for the card component */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -8,22 +9,26 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover effect for the card component */
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the main heading */
 .heading {
     text-align: center;
     color: #6cb2eb;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for secondary headings */
 .heading_1 {
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the brand image in the navbar */
 .navbar-brand img {
     border-radius: 50%;
     width: 50px;
@@ -32,31 +37,37 @@
     /* Adjust size as needed */
 }
 
+/* Padding for the navigation links */
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
 }
 
+/* Margin for font-awesome icons in navigation links */
 .navbar-nav .nav-link .fa {
     margin-right: 5px;
 }
 
 /* Updated CSS for transparent navbar and rainy background effect */
 
+/* Background color for the navbar */
 .navbar {
     background-color: #6cb2eb;
     /* Change background color */
 }
 
+/* Text color for navbar links */
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     /* Change text color */
 }
 
+/* Hover effect for navbar links */
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #f0f0f0;
     /* Change text color on hover */
 }
 
+/* Styling for the brand image in the navbar */
 .navbar-brand img {
     border-radius: 50%;
     width: 50px;
@@ -65,18 +76,22 @@
     /* Adjust size as needed */
 }
 
+/* Padding for the navigation links */
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
 }
 
+/* Margin for font-awesome icons in navigation links */
 .navbar-nav .nav-link .fa {
     margin-right: 5px;
 }
 
+/* Positioning for carousel items */
 .carousel-item {
     position: relative;
 }
 
+/* Styling for custom captions in the carousel */
 .custom-caption {
     position: absolute;
     top: 0;
@@ -96,7 +111,7 @@
     font-family: 'Times New Roman', cursive;
 }
 
-
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -105,6 +120,7 @@ table {
     /* Ensure fixed layout */
 }
 
+/* Styling for table cells */
 table th,
 table td {
     border: 1px solid #ddd;
@@ -112,16 +128,19 @@ table td {
     text-align: center;
 }
 
+/* Styling for table headers */
 table th {
     background-color: #f2f2f2;
     text-align: center;
 }
 
+/* Styling for the body */
 body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: #FFFFF0;
 }
 
+/* Styling for tool buttons */
 .tool-button {
     display: inline-block;
     background-color: #6cb2eb;
@@ -134,22 +153,25 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Hover effect for tool buttons */
 .tool-button:hover {
     background-color: #4a8dc9;
 }
 
+/* Styling for the languages and tools section */
 .languages-and-tools {
     margin-top: 20px;
     text-align: center;
 }
 
+/* Inline styling for paragraphs and links in the languages and tools section */
 .languages-and-tools p,
 .languages-and-tools a {
     display: inline-block;
     margin: 5px;
 }
 
-
+/* Styling for the first type of tool button */
 .tool-button-1 {
     display: inline-block;
     background-color: #dfff00;
@@ -170,6 +192,7 @@ body {
     /* Added transform transition for better effect */
 }
 
+/* Hover effect for the first type of tool button */
 .tool-button-1:hover {
     background-color: #dfff00;
     /* Slightly darker background on hover */
@@ -177,7 +200,7 @@ body {
     /* Slight scale up effect on hover */
 }
 
-
+/* Styling for the second type of tool button */
 .tool-button-2 {
     display: inline-block;
     background-color: bisque;
@@ -198,6 +221,7 @@ body {
     /* Added transform transition for better effect */
 }
 
+/* Hover effect for the second type of tool button */
 .tool-button-2:hover {
     background-color: bisque;
     /* Slightly darker background on hover */
