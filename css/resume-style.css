@@ -9,6 +9,30 @@ body {
     text-align: center;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+
+    /* Ensure the table fits within the card */
+    section.card {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 8px 4px;
+        /* Adjust padding for smaller screens */
+        text-align: left;
+        /* Keep text left-aligned for readability */
+    }
+}
+
 /* Header styling */
 header {
     background-color: #6cb2eb;
@@ -67,7 +91,7 @@ section h2 {
 
 /* Table styling */
 table {
-    width: 100%;
+
     border-collapse: collapse;
     margin-bottom: 20px;
     text-align: center;
