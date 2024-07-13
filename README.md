@@ -28,8 +28,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 - A dedicated section highlights career achievements, making it easy to see professional milestones.
 - The website is user-friendly, with an intuitive interface that is simple to navigate.
 - Responsive design ensures the portfolio looks great and functions well on all devices and screen sizes.
-- Added one new dropdown fol dynamic colro changing of website it has 4 colros- autum, summer, raniy and winter. As soon as it is clicked it changes color.After refreshing thewebsite restores to its default color.
-
+- Added a new dropdown for dynamically changing website colors with options for Autumn, Summer, Rainy, and Winter. Upon selection, the website color changes instantly. Refreshing the website restores it to its default color scheme.
 ---
 
 ## Mode of Execution Used  <img src="https://th.bing.com/th?id=OSAAS.67CE744F3AF9AB3181DA21630627453B&w=80&h=80&o=6&dpr=2&pid=5.1" title="Notepad++" alt="Notepad++" width="40" height="40"> </a> &nbsp;<img src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png" title="Netlify" alt="Netlify" width="40" height="40">
