@@ -3,13 +3,13 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <h2>Website Design</h2>
 
-<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114717](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/59f2a79d-7913-4f63-881b-695b4810eec6)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212656](https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838)</a>
 
-<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114737](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/31ce779d-5230-4301-8d52-ab5cf53fefca)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212716](https://github.com/user-attachments/assets/9fa204dc-c867-47e1-a77b-ecd89bbf9c34)</a>
 
-<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114751](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/4cbe7452-0b55-4529-9032-59bee4f63ab5)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212801](https://github.com/user-attachments/assets/36298b1e-b54b-4360-b2e4-8759fa123010)</a>
 
-<a href = "https://madhurima-rawat-portfolio.netlify.app/">![Screenshot 2024-07-02 114814](https://github.com/madhurimarawat/Portfolio-Website/assets/105432776/958e1603-eeeb-4463-af36-7563877c20f6)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212831](https://github.com/user-attachments/assets/295c0391-6f85-48a6-b15e-adc3ec644da5)</a>
 
 ## Technology Used 💻
 
@@ -28,6 +28,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 - A dedicated section highlights career achievements, making it easy to see professional milestones.
 - The website is user-friendly, with an intuitive interface that is simple to navigate.
 - Responsive design ensures the portfolio looks great and functions well on all devices and screen sizes.
+- Added one new dropdown fol dynamic colro changing of website it has 4 colros- autum, summer, raniy and winter. As soon as it is clicked it changes color.After refreshing thewebsite restores to its default color.
 
 ---
 
