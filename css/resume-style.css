@@ -1,41 +1,11 @@
-/* Body styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #FFFFF0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 600px) {
-
-    /* Ensure the table fits within the card */
-    section.card {
-        padding: 10px;
-    }
-
-    table {
-        width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    table th,
-    table td {
-        padding: 8px 4px;
-        /* Adjust padding for smaller screens */
-        text-align: left;
-        /* Keep text left-aligned for readability */
-    }
+:root {
+    --primary-color: #6cb2eb;
+    /* Default color */
 }
 
 /* Header styling */
 header {
-    background-color: #6cb2eb;
+    background-color: var(--primary-color);
     color: white;
     padding: 20px;
     text-align: center;
@@ -65,6 +35,106 @@ header .contact a {
 /* Hover effect for contact links in header */
 header .contact a:hover {
     text-decoration: underline;
+
+}
+
+/* Styling for icons in the contact section */
+.contact a i {
+    margin-right: 5px;
+
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    /* Add some space between contact links and dropdown */
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    /* Match the background with the header */
+    color: white;
+    /* Set text color to white */
+    padding: 0;
+    /* Remove padding */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    /* Position the dropdown below the toggle button */
+    left: 0;
+    /* Align dropdown to the left */
+    min-width: 180px;
+    /* Ensure minimum width for dropdown */
+    padding: 0;
+    /* Remove padding from dropdown menu */
+}
+
+.dropdown-menu a {
+    position: relative;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    /* Make anchor tags take full width */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.dropdown-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -14px;
+    right: -5px;
+    bottom: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu a:hover::before {
+    transform: scaleX(1);
+}
+
+.dropdown-menu a:hover {
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    max-height: none;
+    /* Ensure the entire menu is shown */
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #FFFFF0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -83,7 +153,7 @@ section {
 
 /* Styling for section h2 */
 section h2 {
-    border-bottom: 2px solid #6cb2eb;
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -120,53 +190,6 @@ table th {
     text-align: center;
 }
 
-/* Styling for unordered lists */
-ul {
-    padding-left: 20px;
-    text-align: center;
-}
-
-/* Styling for list items in unordered lists */
-ul li {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Styling for links within list items */
-ul li a {
-    color: #6cb2eb;
-    text-decoration: none;
-    text-align: center;
-}
-
-/* Hover effect for links within list items */
-ul li a:hover {
-    text-decoration: underline;
-    text-align: center;
-}
-
-/* Styling for icons in the contact section */
-.contact a i {
-    margin-right: 5px;
-    text-align: center;
-}
-
-/* Card styling */
-.card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #FFFFF0;
-}
-
-/* Hover effect for cards */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
 /* Additional styling for unordered lists */
 ul {
     padding-left: 0;
@@ -186,4 +209,104 @@ ul li {
     margin-bottom: 10px;
     width: 100%;
     /* Ensure the li spans the full width */
+}
+
+/* Styling for links within list items */
+ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+
+}
+
+/* Hover effect for links within list items */
+ul li a:hover {
+    text-decoration: underline;
+
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFF0;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+
+
+    /* Adjust contact links */
+    header .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* Ensure even distribution */
+        gap: 0;
+        /* Adjust the gap value as needed */
+    }
+
+    header .contact a {
+        flex: 1 1 calc(40% - 10px);
+        /* Flex basis adjusted */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .contact a:hover {
+        text-decoration: underline;
+    }
+
+    /* Ensure the odd and even items align to the left and right respectively */
+    header .contact a:nth-child(odd) {
+        text-align: left;
+        /* Align odd items to the left */
+    }
+
+    header .contact a:nth-child(even) {
+        text-align: right;
+        /* Align even items to the right */
+    }
+
+
+    /* Dropdown specific styles */
+    header .contact .dropdown {
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        margin-right: 2px;
+
+    }
+
+    /* Ensure the table fits within the card */
+    section.card {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 8px 4px;
+        /* Adjust padding for smaller screens */
+        text-align: left;
+        /* Keep text left-aligned for readability */
+    }
+
 }
