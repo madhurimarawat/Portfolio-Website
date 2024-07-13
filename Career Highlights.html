@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- Header Section -->
   <header>
     <h1>Madhurima Rawat</h1>
     <p>B.Tech Hons. - CSE (Data Science), 3rd Year 6th Semester</p>
@@ -22,8 +21,26 @@
       <a href="https://linktr.ee/madhurima_rawat" target="_blank"><i class="fa fa-link"></i> LinkTree</a>
       <a href="index.htm"><i class="fas fa-globe"></i> Portfolio</a>
       <a href="https://madhurima-devfolio.streamlit.app/"><i class="fas fa-code"></i> Devfolio</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" style="font-family: Arial, sans-serif;"><i class="fas fa-palette"></i>
+          &nbsp;Color
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" onclick="changeColor('autumn')"
+            style="text-align: left; color: black; text-decoration: none;"><i class="fas fa-leaf"></i>Autumn</a>
+          <a class="dropdown-item" href="#" onclick="changeColor('summer')"
+            style="text-align: left; color: black; text-decoration: none;"><i class="fas fa-sun"></i>Summer</a>
+          <a class="dropdown-item" href="#" onclick="changeColor('rainy')"
+            style="text-align: left; color: black; text-decoration: none;"><i
+              class="fas fa-cloud-showers-heavy"></i>Rainy</a>
+          <a class="dropdown-item" href="#" onclick="changeColor('winter')"
+            style="text-align: left; color: black; text-decoration: none;"><i class="fas fa-snowflake"></i>Winter</a>
+        </div>
+      </div>
     </div>
   </header>
+
 
   <!-- Objective Section -->
   <section id="objective" class="card">
@@ -236,5 +253,7 @@
     </ul>
   </section>
 </body>
+<!--  custom JavaScript file -->
+<script src="js/colorSwitcher.js"></script>
 
 </html>
