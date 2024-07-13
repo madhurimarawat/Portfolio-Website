@@ -60,6 +60,22 @@
         <li class="nav-item">
           <a class="nav-link" href="Career Highlights.html">Career Highlights</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#About me" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Color
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" onclick="changeColor('autumn')"><i
+                class="fas fa-leaf"></i>&nbsp;Autumn</a>
+            <a class="dropdown-item" href="#" onclick="changeColor('summer')"><i class="fas fa-sun"></i>&nbspSummer</a>
+            <a class="dropdown-item" href="#" onclick="changeColor('rainy')"><i
+                class="fas fa-cloud-showers-heavy"></i>&nbspRainy</a>
+            <a class="dropdown-item" href="#" onclick="changeColor('winter')"><i
+                class="fas fa-snowflake"></i>&nbspWinter</a>
+          </div>
+        </li>
+
       </ul>
 
       <ul class="navbar-nav ml-auto">
@@ -148,7 +164,7 @@
         <div class="col-md-4 text-center">
           <!-- Placeholder for Photo -->
           <div class="photo-container">
-            <img src="images/Profile Image.png" class="rounded-circle" alt="Your Photo"
+            <img src="images/Profile Image.png" class="rounded-circle" alt="Photo"
               style="width: 200px; height: 200px" loading="eager" />
           </div>
           <h2 style="margin-top: 20px">Madhurima Rawat</h2>
@@ -705,16 +721,16 @@
         LinkedIn</a> &nbsp;
       <a href="https://linktr.ee/madhurima_rawat" target="_blank" style="color: black"><i class="fa fa-link"></i>
         LinkTree</a> &nbsp;
-      <a href="index.htm" style="color: black"><i class="fas fa-globe"></i> Portfolio</a>
+      <a href="index.htm" style="color: black"><i class="fas fa-globe"></i> Portfolio</a>&nbsp;
       <a href="https://madhurima-devfolio.streamlit.app/" style="color: black"><i class="fas fa-code"></i>
-        Devfolio</a>&nbsp;
+        Devfolio</a>
 
     </div>
     <a class="tool-button-2" href="https://github.com/madhurimarawat/Portfolio-Website">Visit on GitHub &nbsp;<i
         class="fab fa-github"></i></a>
   </section>
   <!-- Footer -->
-  <footer style="text-align: center; padding: 10px; background-color: #6cb2eb; color: white;">
+  <footer class="footer-section">
     &copy; 2024 Madhurima Rawat. All rights reserved.
   </footer>
 </body>
@@ -724,5 +740,6 @@
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="js/colorSwitcher.js"></script>
 
 </html>
