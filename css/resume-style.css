@@ -296,17 +296,26 @@ ul li a:hover {
 
     table {
         width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        table-layout: fixed;
+        /* Fixed table layout */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+    /* Ensures the table container does not overflow */
+    .table-container {
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
     }
 
     table th,
     table td {
         padding: 8px 4px;
         /* Adjust padding for smaller screens */
-        text-align: left;
+        text-align: center;
         /* Keep text left-aligned for readability */
+        font-size: 10px;
+
     }
 
 }
