@@ -9,7 +9,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212801](https://github.com/user-attachments/assets/36298b1e-b54b-4360-b2e4-8759fa123010)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212831](https://github.com/user-attachments/assets/295c0391-6f85-48a6-b15e-adc3ec644da5)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212831](https://github.com/user-attachments/assets/2f4e5ec7-6fa1-49b6-8103-e322aa37f73b)</a>
 
 ## Technology Used 💻
 
