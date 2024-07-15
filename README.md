@@ -89,6 +89,22 @@ Portfolio-Website/
 8. Now netlify only supports static website. It does not have a server and it does not support websites with server requirement.<br><br>
 9. We can upload HTML, CSS and JS files in netlify.
 
+## Hosting With GitHub Pages
+
+1. Visit the official website of GitHub Pages: <a href="https://pages.github.com/"><img src="https://github.com/madhurimarawat/GitHub-Repository-Lister/blob/main/GitHub%20Logo.png" title="GitHub Pages" alt="GitHub Pages" width="40" height="40"></a>
+<br><br>
+2. Make sure you have a GitHub account. If not, create one at [GitHub](https://github.com/).<br><br>
+3. Create a new repository on GitHub and upload your project files (index.html, CSS, JS, etc.).<br><br>
+4. Go to the repository settings by clicking on the "Settings" tab.<br><br>
+5. Scroll down to the "Pages" section in the settings.<br><br>
+6. Under "Source," select the branch you want to use for GitHub Pages (usually "main" or "master").<br><br>
+7. If your index.html file is in the root directory of the repository, select the root as the source folder. Otherwise, select the appropriate folder where your index.html is located.<br><br>
+8. Click "Save" to publish your site.<br><br>
+9. GitHub Pages will provide a link to your live site. You can share this link and access your site from any browser.<br><br>
+10. GitHub Pages also supports Jekyll, a static site generator, if you want to use it for more advanced site features.<br>
+
+By following these steps, you can host your static website using GitHub Pages and Netlify. Both platforms provide easy-to-use interfaces and are great for deploying static websites.
+
 ---
 
 ## Website Link
