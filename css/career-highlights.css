@@ -1,3 +1,20 @@
+/*
+*********************************************************************************************
+* File: career-highlights.css
+* Author: Madhurima Rawat
+* Date: July 15, 2024
+* Description: Stylesheet for career highlights section on Madhurima Rawat's personal portfolio website,
+*              including responsive design, hover effects, color schemes, and layout adjustments.
+* Version: 1.0
+* GitHub Repository: https://github.com/madhurimarawat/madhurima-portfolio
+* Issues/Bugs: For any issues or bugs, please visit the GitHub repository issues section.
+* Comments: This CSS file defines styles for various components such as headers, sections, tables, 
+*           and cards within the career highlights section. It enhances user experience and visual appeal.
+* Dependencies: None
+*********************************************************************************************
+*/
+
+/* Root variables for primary colors */
 :root {
     --primary-color: #6cb2eb;
     /* Default color */
