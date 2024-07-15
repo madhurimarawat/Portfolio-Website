@@ -29,6 +29,41 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 - The website is user-friendly, with an intuitive interface that is simple to navigate.
 - Responsive design ensures the portfolio looks great and functions well on all devices and screen sizes.
 - Added a new dropdown for dynamically changing website colors with options for Autumn, Summer, Rainy, and Winter. Upon selection, the website color changes instantly. Refreshing the website restores it to its default color scheme.
+
+## Directory Structure
+
+```
+madhurima-portfolio/
+├── index.html                # Main landing page of the portfolio website
+├── career-highlights.html    # Page dedicated to career highlights and achievements
+│
+├── css/
+│   ├── index.css             # Stylesheet for index.html
+│   └── career-highlights.css # Stylesheet for career-highlights.html
+│
+├── js/
+│ ├── colorSwitcher.js # Script to dynamically change the primary color of the website
+│ └── visibility_colorSwitcher.js # Script to manage the visibility of the color 
+│
+├── images/                   # Folder containing all images used in the website
+│
+├── LICENSE                   # MIT License file
+│
+└── README.md                 # Documentation file for the repository
+```
+
+### Files and Folders
+
+- **index.html**: Main landing page of the portfolio website.
+- **career-highlights.html**: Page dedicated to career highlights and achievements.
+- **css/index.css**: Stylesheet for index.html.
+- **css/career-highlights.css**: Stylesheet for career-highlights.html.
+- **js/colorSwitcher.js**: Script to dynamically change the primary color of the website.
+- **js/visibility_colorSwitcher.js**: Script to manage the visibility of the color switcher dropdown.
+- **images/**: Folder containing all images used in the website.
+- **LICENSE**: MIT License file.
+- **README.md**: Documentation file for the repository.
+
 ---
 
 ## Mode of Execution Used  <img src="https://th.bing.com/th?id=OSAAS.67CE744F3AF9AB3181DA21630627453B&w=80&h=80&o=6&dpr=2&pid=5.1" title="Notepad++" alt="Notepad++" width="40" height="40"> </a> &nbsp;<img src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png" title="Netlify" alt="Netlify" width="40" height="40">
