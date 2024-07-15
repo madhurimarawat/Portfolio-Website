@@ -1,3 +1,21 @@
+<!--
+*********************************************************************************************
+* File: career-highlights.html
+* Author: Madhurima Rawat
+* Date: July 15, 2024
+* Description: Career highlights and achievements of Madhurima Rawat, showcased in her personal portfolio website.
+* Version: 1.0
+* GitHub Repository: https://github.com/madhurimarawat/madhurima-portfolio
+* Issues/Bugs: For any issues or bugs, please visit the GitHub repository issues section.
+* Comments: This HTML file serves as the summary structure for Madhurima Rawat's career highlights and achievements. It includes sections such as Objective, Education, Experience, Projects, Skills, Achievements, and Hobbies. The page also features a dynamic color-changing dropdown menu using JavaScript for enhanced user interaction.
+* Dependencies:
+    - Font Awesome 5.15.3: External CSS for icons.
+    - Bootstrap 4.5.2: External CSS for responsive design (used in other stylesheets).
+    - JavaScript file (visibilty-colorSwitcher.js): Manages a dynamic color-changing dropdown, showing on hover, hiding on mouse leave or click outside, and changing the website's primary color based on user selection.
+    - CSS file (career-highlights.css): Contains styles specific to career highlights page.
+*********************************************************************************************
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +23,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Madhurima Rawat's Portfolio</title>
-  <link rel="stylesheet" href="css/resume-style.css" />
+  <link rel="stylesheet" href="css/career-highlights.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
@@ -19,14 +37,14 @@
       <a href="https://github.com/madhurimarawat"><i class="fab fa-github"></i> GitHub</a>
       <a href="https://www.linkedin.com/in/madhurima-rawat/"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="https://linktr.ee/madhurima_rawat" target="_blank"><i class="fa fa-link"></i> LinkTree</a>
-      <a href="index.htm"><i class="fas fa-globe"></i> Portfolio</a>
+      <a href="index.html"><i class="fas fa-globe"></i> Portfolio</a>
       <a href="https://madhurima-devfolio.streamlit.app/"><i class="fas fa-code"></i> Devfolio</a>
 
       <div class="dropdown">
         <button class="dropdown-toggle" style="font-family: Arial, sans-serif;"><i class="fas fa-palette"></i>
           &nbsp;Color
         </button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu" id="colorDropdown">
           <a class="dropdown-item" href="#" onclick="changeColor('autumn')"
             style="text-align: left; color: black; text-decoration: none;"><i class="fas fa-leaf"></i>Autumn</a>
           <a class="dropdown-item" href="#" onclick="changeColor('summer')"
@@ -274,7 +292,10 @@
   </section>
 
 </body>
-<!--  custom JavaScript file -->
-<script src="js/colorSwitcher.js"></script>
+
+<!--  Custom JavaScript File -->
+<!-- With this script, the dropdown disappears after a set time once an option is selected. 
+Alternatively, using the `colorSwitcher` file keeps the dropdown visible until the user clicks elsewhere on the website. -->
+<script src="js/visibility_colorSwitcher.js"></script>
 
 </html>
