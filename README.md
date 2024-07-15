@@ -33,7 +33,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 ## Directory Structure
 
 ```
-madhurima-portfolio/
+Portfolio-Website/
 ├── index.html                # Main landing page of the portfolio website
 ├── career-highlights.html    # Page dedicated to career highlights and achievements
 │
