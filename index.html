@@ -11,7 +11,7 @@
 * Dependencies:
     - Font Awesome 5.15.3: External CSS for icons.
     - Bootstrap 4.5.2: External CSS for responsive design (used in other stylesheets).
-    - JavaScript file (colorSwitcher.js): Manages the dynamic color-changing functionality.
+    - JavaScript file (index.js): Manages the dynamic color-changing functionality.
     - CSS file (index.css): Contains styles for this portfolio.
 *********************************************************************************************
 -->
@@ -50,16 +50,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#About me" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfile" role="button"
                         data-toggle="dropdown" aria-expanded="false">
                         Profile
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#About me">About Me</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+                        <a class="dropdown-item" href="#About_me">About Me</a>
                         <a class="dropdown-item" href="#Education">Education</a>
                         <a class="dropdown-item" href="#skills">Skills</a>
                         <a class="dropdown-item" href="#hobbies-and-interests">Hobbies</a>
-                        <a class="dropdown-item" href="https://madhurima-devfolio.streamlit.app/">Devfolio</a>
+                        <a class="dropdown-item dev" href="https://madhurima-devfolio.streamlit.app/" target="_blank"
+                            rel="noopener noreferrer">Devfolio</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -167,7 +168,7 @@
     <!---------------------  Slider Section Ends From Here  ----------------->
 
     <!---------------------  Header  Section Starts From Here  ----------------->
-    <section id="About me">
+    <section id="About_me">
         <br />
         <p style="text-align: center;">
             <a href="https://git.io/typing-svg" style="text-align: center;">
@@ -793,6 +794,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
-<script src="js/colorSwitcher.js"></script>
+<script src="js/index.js"></script>
+<!-- jQuery first, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </html>
