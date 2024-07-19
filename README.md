@@ -42,8 +42,8 @@ Portfolio-Website/
 │   └── career-highlights.css # Stylesheet for career-highlights.html
 │
 ├── js/
-│ ├── colorSwitcher.js # Script to dynamically change the primary color of the website
-│ └── visibility_colorSwitcher.js # Script to manage the visibility of the color 
+│ ├── index.js # Script to dynamically change the primary color of the website
+│ └── career-highlights.js # Script to manage the visibility of the color 
 │
 ├── images/                   # Folder containing all images used in the website
 │
