@@ -58,7 +58,27 @@ function changeColor(Color) {
 }
 
 $(document).ready(function () {
-  // Select all dropdown items within the "Profile" section
+  // Function to handle smooth scrolling for both dropdown and direct navigation items
+  function smoothScroll(event, target) {
+    var offset;
+
+    // Check if it's a mobile device
+    if ($(window).width() < 992) {
+      offset = $(target).offset().top - 75; // Manually adjust for mobile, excluding navbar height
+    } else {
+      offset = $(target).offset().top - $(".navbar").outerHeight() - (-10); // Default offset for larger screens
+    }
+
+    // Smooth scroll to the target section
+    $('html, body').animate({
+      scrollTop: offset
+    }, 800);
+
+    // Collapse the navbar menu after clicking a dropdown item
+    $(".navbar-collapse").collapse('hide');
+  }
+
+  // Handle click event for dropdown items within the "Profile" section
   $("#navbarDropdownProfile + .dropdown-menu a.dropdown-item").on('click', function (event) {
     // Check if the clicked item has the class 'dev'
     if ($(this).hasClass('dev')) {
@@ -69,23 +89,13 @@ $(document).ready(function () {
       event.preventDefault();
 
       var target = $(this).attr("href");
-      var offset;
-
-      // Check if it's a mobile device
-      if ($(window).width() < 992) {
-        offset = $(target).offset().top - 75; // Manually adjust for mobile, excluding navbar height
-      } else {
-        offset = $(target).offset().top - $(".navbar").outerHeight() - (-10); // Default offset for larger screens
-      }
-
-      // Smooth scroll to the target section
-      $('html, body').animate({
-        scrollTop: offset
-      }, 800);
-
-      // Collapse the navbar menu after clicking a dropdown item
-      $(".navbar-collapse").collapse('hide');
+      smoothScroll(event, target);
     }
   });
-});
 
+  // Handle click event for direct navigation items
+  $(".nav-item a.nav-link").on('click', function (event) {
+    var target = $(this).attr("href");
+    smoothScroll(event, target);
+  });
+});
