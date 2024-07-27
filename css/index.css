@@ -269,3 +269,21 @@ body {
     color: white;
     background-color: var(--primary-color);
 }
+
+/* Add margin-top to row class for larger screens */
+.row+.row {
+    margin-top: 24px;
+    /* Adjust the value as needed */
+}
+
+/* For mobile devices, set margin-top to 0 for rows and add margin-bottom to cards */
+@media (max-width: 767.98px) {
+    .row+.row {
+        margin-top: 0;
+    }
+
+    .col-md-3 {
+        margin-bottom: 20px;
+        /* Adjust the value as needed */
+    }
+}
