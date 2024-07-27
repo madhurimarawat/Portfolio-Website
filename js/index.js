@@ -99,3 +99,12 @@ $(document).ready(function () {
     smoothScroll(event, target);
   });
 });
+
+// Run when DOM content is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Center align contentRow element using Flexbox
+  var contentRow = document.getElementById("contentRow_1");
+  if (contentRow) {
+    contentRow.classList.add("d-flex", "justify-content-center");
+  }
+});
