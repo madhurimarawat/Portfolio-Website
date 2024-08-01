@@ -59,8 +59,8 @@ Portfolio-Website/
 - **career-highlights.html**: Page dedicated to career highlights and achievements.
 - **css/index.css**: Stylesheet for index.html.
 - **css/career-highlights.css**: Stylesheet for career-highlights.html.
-- **js/colorSwitcher.js**: Script to dynamically change the primary color of the website.
-- **js/visibility_colorSwitcher.js**: Script to manage the visibility of the color switcher dropdown.
+- **js/index.js**: Script to dynamically change the primary color of the website.
+- **js/career-highlights.js**: Script to manage the visibility of the color switcher dropdown for the career highlights page.
 - **images/**: Folder containing all images used in the website.
 - **LICENSE**: MIT License file.
 - **README.md**: Documentation file for the repository.
