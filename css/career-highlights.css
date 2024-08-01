@@ -336,3 +336,155 @@ ul li a:hover {
     }
 
 }
+
+/* Full width card */
+.wheel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    /* Hide overflow */
+    background: #FFFFF0;
+    /* Background color */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General styles for icons */
+.wheel .links i {
+    font-size: 24px;
+    /* Adjust size */
+    color: #333;
+    /* Default color for icons */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+/* Change icon color on hover */
+.wheel .links a:hover i {
+    color: var(--primary-color);
+    /* Color on hover */
+}
+
+/* Central icon styles */
+.center i {
+    font-size: 48px;
+    /* Larger central icon size */
+    color: var(--primary-color);
+    /* Default color for central icon */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+/* Change color of the central icon */
+.center i.active {
+    color: var(--primary-color);
+    /* Active color for central icon, change as needed */
+}
+
+/* Color change for central icon on hover */
+.center:hover i {
+    color: var(--primary-color);
+    /* Hover color for central icon */
+}
+
+.scale {
+    transform: scale(1.2);
+    /* Example scale effect */
+}
+
+/* Central image styling */
+.center {
+    position: absolute;
+    z-index: 1;
+}
+
+.center-image {
+    width: 100px;
+    /* Adjust size as needed */
+    height: 100px;
+    /* Adjust size as needed */
+}
+
+.center img {
+    width: 100px;
+    /* Adjust as needed */
+    height: 100px;
+    /* Adjust as needed */
+}
+
+.scale img {
+    transform: scale(1.2);
+    /* Adjust as needed */
+}
+
+/* Links container */
+.links {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual link styling */
+.link {
+    position: absolute;
+    font-size: 2rem;
+    /* Adjust size as needed */
+    color: #333;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Central image scaling with square border */
+.link.scale {
+    transform: scale(1.2);
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link.scale::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    /* Adjust as needed to make corners disappear */
+    box-shadow: 0 0 10px var(--primary-color-lighter);
+    /* Add a subtle glow for effect */
+    transform: translate(-50%, -50%) scale(1.2);
+    /* Center and slightly enlarge the box */
+    z-index: -1;
+    /* Ensure it appears behind the image */
+    pointer-events: none;
+    /* Ensure the pseudo-element doesn't capture mouse events */
+}
+
+/* Ensure the image stays centered */
+.link.scale img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* Ensure the image appears above the pseudo-element */
+    object-fit: contain;
+}
