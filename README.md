@@ -29,6 +29,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 - The website is user-friendly, with an intuitive interface that is simple to navigate.
 - Responsive design ensures the portfolio looks great and functions well on all devices and screen sizes.
 - Added a new dropdown for dynamically changing website colors with options for Autumn, Summer, Rainy, and Winter. Upon selection, the website color changes instantly. Refreshing the website restores it to its default color scheme.
+- Added a dynamic wheel animation for the social links section, where each link rotates into the center sequentially. The animation loops continuously, reversing direction after every three links. The central icon and title update with each link. Additionally, I’ve placed the social links logo on the main page and corresponding Font Awesome icons on the career highlights page.
 
 ## Directory Structure
 
@@ -42,8 +43,8 @@ Portfolio-Website/
 │   └── career-highlights.css # Stylesheet for career-highlights.html
 │
 ├── js/
-│ ├── index.js # Script to dynamically change the primary color of the website
-│ └── career-highlights.js # Script to manage the visibility of the color 
+│ ├── index.js                # Script to dynamically change the primary color of the website
+│ └── career-highlights.js    # Script to manage the visibility of the color 
 │
 ├── images/                   # Folder containing all images used in the website
 │
