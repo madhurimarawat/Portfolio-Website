@@ -93,10 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.link');
     const totalLinks = links.length;
     const centerRotationDuration = 3000; // Duration for each link to stay in center
-    const radius = 150; // Distance of icons from center
+    var radius;
+    if (window.innerWidth <= 480) {
+        radius = 125;
+    } else {
+        radius = 150;
+    }
     const rotationSpeed = 0.5; // Speed of the rotation (in degrees per frame)
     const initialDisplayDuration = 1000; // Duration for initial central icon to be displayed (in milliseconds)
-    const initialImageSrc = 'https://ouch-cdn2.icons8.com/7t1OP99ujxbijKLclt_j8lXv5sNR8Ob4utsa-QRFnf0/rs:fit:435:456/extend:false/wm:1:re:0:0:0.8/wmid:ouch/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTA0/L2RjMWUzN2RiLWM1/NzctNGY0Mi05ZWFj/LWVkMWRlYjJkMDAw/Yy5zdmc.png';
     const initialTitle = 'Central Title';
     const initialHref = '#';
 
@@ -127,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentIndex === 0) {
             // Reset to initial icon after all links have been shown
-            centralIcon.className = 'fas fa-star'; // Default central icon class
+            centralIcon.className = 'fas fa-user-friends'; // Default central icon class
             centralIcon.style.color = primaryColor; // Use the primary color for the central icon
             centralLink.href = initialHref;
             centralLink.title = initialTitle;

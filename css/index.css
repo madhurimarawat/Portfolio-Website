@@ -261,6 +261,8 @@ body {
     /* Slightly darker background on hover */
     transform: scale(1.05);
     /* Slight scale up effect on hover */
+    color: var(--primary-color);
+    /* Change text color on hover */
 }
 
 .footer-section {
