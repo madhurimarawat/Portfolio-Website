@@ -1,5 +1,4 @@
-/*
-*********************************************************************************************
+/*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
 * Date: July 15, 2024
@@ -7,18 +6,13 @@
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
 * Version: 1.0
-* GitHub Repository: https://github.com/madhurimarawat/madhurima-portfolio
+* GitHub Repository: https://github.com/madhurimarawat/Portfolio-Website
 * Issues/Bugs: For any issues or bugs, please visit the GitHub repository issues section.
 * Comments: This JS file defines functions to update the primary color variable of the root
 *           element based on the provided season. It enhances user experience by allowing
 *           dynamic customization of the color scheme.
 * Dependencies: None
-*********************************************************************************************
-
-*/
-/**
- * Updates the primary color variable of the root element based on the provided color name.
- */
+*********************************************************************************************/
 
 /**
  * Change Primary Color Variable

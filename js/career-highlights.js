@@ -4,18 +4,21 @@
 * Author: Madhurima Rawat
 * Date: July 15, 2024
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, managing the
-*              behavior of a color switcher dropdown for dynamically changing the website's primary color.
-* Version: 1.0
-* GitHub Repository: https://github.com/madhurimarawat/madhurima-portfolio
+*              behavior of a color switcher dropdown for dynamically changing the website's primary color,
+*              and animating social links wheel with dynamic updates to central icon and title.
+* Version: 1.1
+* GitHub Repository: https://github.com/madhurimarawat/Portfolio-Website
 * Issues/Bugs: For any issues or bugs, please visit the GitHub repository issues section.
 * Comments: This JS file defines scripts to manage the visibility and interaction of the color switcher
-*           dropdown, enhancing user experience by allowing dynamic customization of the website's color scheme.
+*           dropdown, and a social links wheel, enhancing user experience by allowing dynamic customization
+*           of the website's color scheme and interactive display of social links.
 * Dependencies: None
 *********************************************************************************************
 */
 
 /**
- * Manages the behavior of a color switcher dropdown for dynamically changing the website's primary color.
+ * Manages the behavior of a color switcher dropdown for dynamically changing the website's primary color,
+ * and animates the social links wheel with dynamic updates to the central icon and title.
  */
 
 /**
@@ -27,6 +30,16 @@
  * - Hides the dropdown menu when clicking outside the dropdown.
  * - Changes the root element's primary color variable based on user selection.
  * - Automatically hides the dropdown after a delay once a color is selected.
+ */
+
+/**
+ * Social Links Wheel Animation
+ * 
+ * This script manages the behavior of a social links wheel:
+ * - Dynamically updates the position and rotation of social links around a central icon.
+ * - Rotates the wheel and updates the central icon and title based on the current link.
+ * - Adjusts radius based on screen size for responsiveness.
+ * - Starts animation only after user scrolls to the section using Intersection Observer.
  */
 
 // Function to handle interactions with the color switcher dropdown
@@ -93,16 +106,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.link');
     const totalLinks = links.length;
     const centerRotationDuration = 3000; // Duration for each link to stay in center
-    var radius;
-    if (window.innerWidth <= 480) {
-        radius = 125;
-    } else {
-        radius = 150;
-    }
     const rotationSpeed = 0.5; // Speed of the rotation (in degrees per frame)
     const initialDisplayDuration = 1000; // Duration for initial central icon to be displayed (in milliseconds)
     const initialTitle = 'Central Title';
     const initialHref = '#';
+
+    let radius = 150; // Default radius for larger screens
+
+    // Adjust radius based on screen width
+    if (window.innerWidth > 412 && window.innerWidth <= 480) {
+        // Screen width between 413px and 480px
+        radius = 123;
+    } else if (window.innerWidth < 412 && window.innerWidth > 344) {
+        // Screen width between 345px and 411px
+        radius = 108;
+    } else if (window.innerWidth <= 344) {
+        // Screen width 344px or smaller
+        radius = 106;
+    } else if (window.innerWidth == 412) {
+        // Exact screen width of 412px
+        radius = 135;
+    }
 
     let currentIndex = 0;
     let angle = 0; // Initial rotation angle
@@ -170,12 +194,28 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateRotation); // Request the next frame
     }
 
-    // Start the rotation animation
-    animateRotation();
+    // Intersection Observer to start animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Start the rotation animation
+                animateRotation();
 
-    // Display the initial central icon for a set duration, then start the periodic rotation
-    setTimeout(() => {
-        rotateCenter(); // Rotate center once after the initial delay
-        rotationInterval = setInterval(rotateCenter, centerRotationDuration); // Start the periodic rotation
-    }, initialDisplayDuration);
+                // Display the initial central icon for a set duration, then start the periodic rotation
+                setTimeout(() => {
+                    rotateCenter(); // Rotate center once after the initial delay
+                    rotationInterval = setInterval(rotateCenter, centerRotationDuration); // Start the periodic rotation
+                }, initialDisplayDuration);
+
+                // Stop observing after the animation starts
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust the threshold as needed
+    });
+
+    // Start observing the social links section
+    const socialLinksSection = document.getElementById('social-links-section');
+    observer.observe(socialLinksSection);
 });

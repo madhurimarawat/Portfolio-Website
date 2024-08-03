@@ -3,13 +3,18 @@
 * File: career-highlights.css
 * Author: Madhurima Rawat
 * Date: July 15, 2024
-* Description: Stylesheet for career highlights section on Madhurima Rawat's personal portfolio website,
-*              including responsive design, hover effects, color schemes, and layout adjustments.
+* Description: Stylesheet for the career highlights section on Madhurima Rawat's personal portfolio 
+*              website, including responsive design, hover effects, color schemes, and layout adjustments.
+*              This stylesheet defines styles for headers, sections, tables, cards, and a rotating wheel 
+*              of social links. The wheel displays social links around a central logo, with each link 
+*              rotating to the center one by one. The animation continues until all links have been shown, 
+*              then repeats. After every three links, the wheel rotates anticlockwise before resuming 
+*              the clockwise rotation. The central icon and title are dynamically updated with each link.
 * Version: 1.0
-* GitHub Repository: https://github.com/madhurimarawat/madhurima-portfolio
+* GitHub Repository: https://github.com/madhurimarawat/Portfolio-Website
 * Issues/Bugs: For any issues or bugs, please visit the GitHub repository issues section.
-* Comments: This CSS file defines styles for various components such as headers, sections, tables, 
-*           and cards within the career highlights section. It enhances user experience and visual appeal.
+* Comments: This CSS file enhances the user experience and visual appeal of the career highlights section,
+*           ensuring consistency and responsiveness across different devices.
 * Dependencies: None
 *********************************************************************************************
 */
@@ -189,9 +194,7 @@ table th,
 table td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
     text-align: center;
-    /* redundant, removed */
 }
 
 /* Styling for table headers */
@@ -257,16 +260,16 @@ ul li a:hover {
     text-align: center;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 600px) {
+/* Media queries for mobile devices */
 
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
 
     /* Adjust contact links */
     header .contact {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        /* Ensure even distribution */
         gap: 0;
         /* Adjust the gap value as needed */
     }
@@ -296,14 +299,13 @@ ul li a:hover {
         /* Align even items to the right */
     }
 
-
     /* Dropdown specific styles */
     header .contact .dropdown {
         display: flex;
-        align-items: left;
+        align-items: flex-start;
+        /* Align items to the left */
         justify-content: center;
         margin-right: 2px;
-
     }
 
     /* Ensure the table fits within the card */
@@ -330,11 +332,29 @@ ul li a:hover {
         padding: 8px 4px;
         /* Adjust padding for smaller screens */
         text-align: center;
-        /* Keep text left-aligned for readability */
-        font-size: 10px;
-
+        /* Center-align text for readability */
+        font-size: 8px;
     }
+}
 
+/* Styles for screens up to 360px */
+@media (max-width: 360px) {
+
+    table th,
+    table td {
+        font-size: 7px;
+        /* Further adjust font size for very small screens */
+    }
+}
+
+/* Styles for screens up to 344px */
+@media (max-width: 344px) {
+
+    table th,
+    table td {
+        font-size: 7px;
+        /* Maintain the smaller font size for consistency */
+    }
 }
 
 /* Full width card */
