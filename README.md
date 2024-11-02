@@ -3,15 +3,21 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <h2>Website Design</h2>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212656](https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 1](https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212716](https://github.com/user-attachments/assets/9fa204dc-c867-47e1-a77b-ecd89bbf9c34)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 2](https://github.com/user-attachments/assets/9fa204dc-c867-47e1-a77b-ecd89bbf9c34)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212801](https://github.com/user-attachments/assets/36298b1e-b54b-4360-b2e4-8759fa123010)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 3](https://github.com/user-attachments/assets/36298b1e-b54b-4360-b2e4-8759fa123010)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Screenshot 2024-07-13 212831](https://github.com/user-attachments/assets/2f4e5ec7-6fa1-49b6-8103-e322aa37f73b)</a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/9e3449e2-ec05-4e9a-8972-dc53ed0dd776" width = "100%" title = "Portfolio Website Social Links Section" alt = "Portfolio Website Social Links Section"></a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/9e3449e2-ec05-4e9a-8972-dc53ed0dd776" width = "100%"></a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/87d676c9-ef78-40a8-9f03-528f871ec44c" width = "100%" title = "Portfolio Website Themes Section" alt = "Portfolio Website Themes Section"></a>
+
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Career Highlights Snapshot](https://github.com/user-attachments/assets/2f4e5ec7-6fa1-49b6-8103-e322aa37f73b)</a>
+
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/4c985b45-1a93-4c7e-b25e-44de70adca58" width = "100%" title = "Career Highlights Social Links" alt = "Career Highlights Social Links"></a>
+
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/c5fecb28-0c98-4f6b-bb12-b75b731fe563" width = "100%" title = "Career Highlights Themes Section" alt = "Career Highlights Themes Section"></a>
 
 ## Technology Used 💻
 
