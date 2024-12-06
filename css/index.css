@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: July 15, 2024
+* Date: December 06, 2024
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -408,4 +408,21 @@ body {
     z-index: 1;
     /* Ensure the image appears above the pseudo-element */
     object-fit: contain;
+}
+
+/* Media query for screens between 768px and 912px  for name logo and tagline */
+@media (min-width: 768px) and (max-width: 912px) {
+    .responsive-name {
+        width: 200px;
+        /* Adjust width for smaller devices */
+        height: 40px;
+        /* Adjust height proportionally */
+    }
+
+    .responsive-tagline {
+        width: 280px;
+        /* Adjust width for smaller devices */
+        height: 60px;
+        /* Adjust height proportionally */
+    }
 }
