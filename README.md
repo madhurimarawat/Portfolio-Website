@@ -123,7 +123,9 @@ By following these steps, you can host your static website using GitHub Pages an
 ---
 ## Additional Resources 
 
-<p> For more Frontend Development codes visit my repository: https://github.com/madhurimarawat/Website-Frontend-Developement </p>
+- For more Frontend Development codes, visit my repository: [Website-Frontend-Development](https://github.com/madhurimarawat/Website-Frontend-Developement).
+
+- The [NameBlock-Designer](https://github.com/madhurimarawat/NameBlock-Designer) project contains the tool I used to create my name in blocks and make it transparent using [Remove.bg](https://www.remove.bg/). This tool generates a transparent PNG image from the given text, where the letters are initially white. If you want the letters to be transparent as well, you can use any background removal tool like Remove.bg for further customization. You can explore and use the NameBlock-Designer tool here: [NameBlock-Designer Live Demo](https://madhurimarawat.github.io/NameBlock-Designer/).
 
 ---
 
