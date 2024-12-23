@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.html
 * Author: Madhurima Rawat
-* Date: December 04, 2024
+* Date: December 23, 2024
 * Description: This HTML file presents the career highlights and notable achievements of Madhurima Rawat, featured in her personal portfolio website. It encompasses a comprehensive overview of her professional and academic journey, including sections on Objective, Education, Experience, Projects, Skills, Achievements, and Hobbies.
 * Version: 1.0
 * GitHub Repository: https://github.com/madhurimarawat/Portfolio-Website
@@ -26,6 +26,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Author and version meta tags -->
+  <meta name="author" content="Madhurima Rawat" />
+  <meta name="version" content="1.0" />
+
+  <!-- SEO meta tags -->
+  <meta name="description"
+    content="Explore Madhurima Rawat's personal portfolio, showcasing education, experience, projects, skills, achievements, and hobbies. Learn more about her professional journey and accomplishments." />
+  <meta name="keywords"
+    content="Madhurima Rawat, portfolio, web developer, education, experience, projects, skills, achievements, hobbies, front-end developer, JavaScript, HTML, CSS, Python, GitHub, personal website" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- 
+        Specifies the publication date and time in ISO 8601 format. 
+        The structure includes:
+        - Date in YYYY-MM-DD format: 
+          YYYY = 4-digit year (e.g., 2024)
+          MM   = 2-digit month (e.g., 07 for July)
+          DD   = 2-digit day (e.g., 05)
+        - A literal 'T' separator between date and time.
+        - Time in HH:MM:SS format: 
+          HH = 2-digit hour in 24-hour format (e.g., 17 for 5 PM in UTC)
+          MM = 2-digit minutes (e.g., 16)
+          SS = 2-digit seconds (e.g., 28)
+        - 'Z' at the end indicates the time is in Coordinated Universal Time (UTC).
+        Example: "2024-07-05T17:16:28Z" represents July 5, 2024, at 5:16:28 PM UTC.
+    -->
+
+  <!-- Specifies the publication date and time in ISO 8601 format -->
+  <meta name="date" content="2024-07-05T17:16:28Z" />
+
+  <!-- Last Updated -->
+  <meta name="last-modified" content="2024-12-23T12:40:28Z">
+
+  <!-- Open Graph Meta Tags for LinkedIn, Facebook, and other social media platforms -->
+  <meta property="og:title" content="Madhurima Rawat's Portfolio - Showcase of Education, Experience, and Projects" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://madhurimarawat.github.io/Portfolio-Website/" />
+  <meta property="og:description"
+    content="Explore the personal portfolio of Madhurima Rawat, showcasing education, experience, projects, skills, achievements, and hobbies." />
+  <meta property="og:image" content="https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838" />
+  <meta property="og:image:alt" content="Madhurima Rawat Portfolio Screenshot" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Madhurima Rawat's Portfolio" />
+
+  <!-- Twitter Card meta tags (for Twitter preview) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Madhurima Rawat's Portfolio - Showcase of Education, Experience, and Projects" />
+  <meta name="twitter:description"
+    content="Explore the personal portfolio of Madhurima Rawat, showcasing education, experience, projects, skills, achievements, and hobbies." />
+  <meta name="twitter:image"
+    content="https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838" />
+  <meta name="twitter:image:alt" content="Madhurima Rawat Portfolio Screenshot" />
+  <meta name="twitter:creator" content="@madhurimarawat" />
+  <meta name="twitter:site" content="@madhurimarawat" />
+
+  <!-- Open Graph for better display of the page when shared on LinkedIn, Facebook, and other platforms -->
+  <meta property="og:title" content="Madhurima Rawat's Portfolio - Education, Projects & Achievements" />
+  <meta property="og:url" content="https://madhurimarawat.github.io/Portfolio-Website/" />
+  <meta property="og:description"
+    content="Explore my personal portfolio, showcasing education, skills, projects, and achievements." />
+  <meta property="og:image" content="https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838" />
+
+  <!-- Open Graph for images and other content -->
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url"
+    content="https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838" />
+
+  <!-- Additional meta tags for better cross-platform compatibility -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="VS Code" />
+
+  <!-- Social media tags (LinkedIn, Facebook, etc.) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Madhurima Rawat's Portfolio" />
+  <meta name="twitter:description"
+    content="Explore my personal portfolio, showcasing education, skills, projects, and achievements." />
+  <meta name="twitter:image"
+    content="https://github.com/user-attachments/assets/d3e225c3-9dd0-4685-af2b-079c9f4d8838" />
+
+
   <title>Madhurima Rawat's Portfolio</title>
   <link rel="stylesheet" href="css/career-highlights.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -360,6 +442,12 @@
         </a>
         <a href="https://instagram.com/madhurima8487" class="link" target="_blank" title="Instagram Profile">
           <i class="fab fa-instagram" title="Instagram Profile"></i>
+        </a>
+        <a href="https://in.pinterest.com/rawatmadhurima4/" class="link" target="_blank" title="Pinterest Profile">
+          <i class="fab fa-pinterest" title="Pinterest Profile"></i>
+        </a>
+        <a href="https://medium.com/@rawatmadhurima4" class="link" target="_blank" title="Medium Profile">
+          <i class="fab fa-medium" title="Medium Profile"></i>
         </a>
       </div>
     </div>
