@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: July 15, 2024
+* Date: February 14, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -96,12 +96,19 @@ $(document).ready(function () {
 
 // Run when DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Center align contentRow element using Flexbox
-  var contentRow = document.getElementById("contentRow_1");
-  if (contentRow) {
-    contentRow.classList.add("d-flex", "justify-content-center");
+  // Function to center align elements using Flexbox
+  function centerAlignContentRow(id) {
+    var contentRow = document.getElementById(id);
+    if (contentRow) {
+      contentRow.classList.add("d-flex", "justify-content-center");
+    }
   }
+
+  // Apply to both contentRow_1 and contentRow_2
+  centerAlignContentRow("contentRow_1");
+  centerAlignContentRow("contentRow_2");
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.link');
@@ -215,5 +222,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
