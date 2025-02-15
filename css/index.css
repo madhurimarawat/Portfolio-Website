@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: December 06, 2024
+* Date: February 15, 2025
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -278,18 +278,6 @@ body {
     /* Adjust the value as needed */
 }
 
-/* For mobile devices, set margin-top to 0 for rows and add margin-bottom to cards */
-@media (max-width: 767.98px) {
-    .row+.row {
-        margin-top: 0;
-    }
-
-    .col-md-3 {
-        margin-bottom: 20px;
-        /* Adjust the value as needed */
-    }
-}
-
 /* Full width card */
 .wheel {
     position: relative;
@@ -408,6 +396,34 @@ body {
     z-index: 1;
     /* Ensure the image appears above the pseudo-element */
     object-fit: contain;
+}
+
+/* This rule applies to all <h5> elements inside any <section> */
+section h5 {
+    color: #ff9aa2;
+    /* Sets the text color to a soft pink shade */
+}
+
+/* Apply styles only when the screen width is 400px or smaller */
+@media (max-width: 400px) {
+
+    /* Target the <img> inside the <p> tag */
+    p img {
+        margin-left: 5px;
+        /* Adds left margin to shift the image to the right */
+    }
+}
+
+/* For mobile devices, set margin-top to 0 for rows and add margin-bottom to cards */
+@media (max-width: 767.98px) {
+    .row+.row {
+        margin-top: 0;
+    }
+
+    .col-md-3 {
+        margin-bottom: 20px;
+        /* Adjust the value as needed */
+    }
 }
 
 /* Media query for screens between 768px and 912px  for name logo and tagline */
