@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: February 15, 2025
+* Date: February 25, 2025
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -404,13 +404,54 @@ section h5 {
     /* Sets the text color to a soft pink shade */
 }
 
+/* Section for the "Thank You" message */
+#thank-you {
+    text-align: center;
+    /* Centers the text */
+    padding: 20px;
+    /* Adds spacing around the content */
+    background-color: #f1f1f1;
+    /* Light grey background for contrast */
+}
+
+/* Styling for the contact section */
+.contact {
+    text-align: center;
+    /* Centers the text */
+    padding: 10px;
+    /* Adds spacing for better visual separation */
+    color: black;
+    /* Ensures text color is black for readability */
+}
+
+/* Styling for contact links */
+.contact a {
+    color: black;
+    /* Keeps links black to maintain uniformity */
+    padding: 5px;
+    /* Adds spacing between links for better accessibility */
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+/* Optional: Add hover effect for better user interaction */
+.contact a:hover {
+    color: #555;
+    /* Slightly darkens link color on hover */
+}
+
 /* Apply styles only when the screen width is 400px or smaller */
 @media (max-width: 400px) {
 
-    /* Target the <img> inside the <p> tag */
     p img {
-        margin-left: 5px;
-        /* Adds left margin to shift the image to the right */
+        width: 350px;
+        /* Sets a fixed width for the image */
+        max-width: 100%;
+        /* Ensures the image remains responsive and doesn't overflow its container */
+        display: block;
+        /* Makes the image a block element, allowing margin auto to work */
+        margin: 0 auto;
+        /* Centers the image horizontally within its parent */
     }
 }
 
