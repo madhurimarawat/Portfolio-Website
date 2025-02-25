@@ -440,6 +440,11 @@ section h5 {
     /* Slightly darkens link color on hover */
 }
 
+/* To center align Typing svg */
+#center-paragraph {
+    text-align: center;
+}
+
 /* Apply styles only when the screen width is 400px or smaller */
 @media (max-width: 400px) {
 
