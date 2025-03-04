@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: February 25, 2025
+* Date: March 04, 2025
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -265,11 +265,43 @@ body {
     /* Change text color on hover */
 }
 
+/* Footer Section - Centers text, applies padding, and sets background color */
 .footer-section {
     text-align: center;
+    /* Aligns text to the center */
     padding: 10px;
+    /* Adds space inside the footer */
     color: white;
+    /* Sets text color to white */
     background-color: var(--primary-color);
+    /* Uses primary color for background */
+}
+
+/* Certifications Card - Ensures equal spacing and structured layout */
+#certifications .card-body {
+    display: flex;
+    /* Enables flexible box layout */
+    flex-direction: column;
+    /* Stacks elements vertically */
+    justify-content: space-between;
+    /* Ensures equal spacing between elements */
+    height: 100%;
+    /* Makes sure all cards have equal height */
+}
+
+/* Certification Card Text - Ensures consistency in height */
+#certifications .card-text {
+    min-height: 2rem;
+    /* Sets minimum height to prevent uneven card sizes */
+    /* Adjust this value if text alignment issues occur */
+}
+
+/* Certification Button - Centers and styles the button */
+#certifications .btn {
+    align-self: center;
+    /* Centers the button horizontally */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth hover effect */
 }
 
 /* Add margin-top to row class for larger screens */
