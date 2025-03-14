@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: March 04, 2025
+* Date: March 14, 2025
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -171,6 +171,8 @@ table th {
 body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: #FFFFF0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets the font family */
 }
 
 /* Styling for tool buttons */
