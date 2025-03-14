@@ -74,6 +74,13 @@ header .contact a:hover {
     /* Add some space between contact links and dropdown */
 }
 
+/* Dropdown item styles */
+.dropdown-menu a {
+    text-align: left !important;
+    color: black !important;
+    text-decoration: none !important;
+}
+
 .dropdown-toggle {
     background-color: transparent;
     /* Match the background with the header */
@@ -258,6 +265,16 @@ ul li a:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+/* Sections Link Color */
+section div a {
+    color: var(--primary-color);
+}
+
+/* Sections Link Hover Color */
+section div a:hover {
+    color: var(--primary-color-lighter);
 }
 
 /* Media queries for mobile devices */

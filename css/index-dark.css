@@ -1,0 +1,166 @@
+/*
+**********************************************************************************************
+ * File           : index-dark.css
+ * Author         : Madhurima Rawat
+ * Date Created   : March 14, 2025
+ * Version        : 1.0
+ * 
+ * Description    : 
+ *   This stylesheet defines the dark mode theme for Madhurima Rawat's personal portfolio website.
+ *   It includes customized color schemes, responsive design tweaks, hover effects, and layout 
+ *   adjustments specifically optimized for a darker aesthetic.
+ * 
+ * Features       :
+ *   - Dark color scheme for navbar, footer, cards, buttons, and text.
+ *   - Enhanced hover effects for buttons and interactive components.
+ *   - Consistent typography and spacing for readability in dark mode.
+ *   - Responsive design support across different devices and screen sizes.
+ * 
+ * GitHub Repo    : https://github.com/madhurimarawat/Portfolio-Website
+ * Issues/Bugs    : 
+ *   For any issues or bugs, please visit the repository’s issues section:
+ *   https://github.com/madhurimarawat/Portfolio-Website/issues
+ * 
+ * Dependencies   : 
+ *   - Bootstrap 4.5.2 (for grid system and responsive utilities)
+ *   - Font Awesome 5.15.3 (for icons)
+ * 
+ * Comments       : 
+ *   This CSS file customizes elements such as the navigation bar, buttons, cards, and footer
+ *   to provide a cohesive dark mode experience. The styling focuses on maintaining user 
+ *   experience with balanced contrasts, smooth transitions, and subtle shadows.
+ **********************************************************************************************
+ */
+
+/* Body background - soft deep black for a clean dark mode */
+body {
+    background-color: #333;
+    /* Dark charcoal (#333), softer than pure black (#000) */
+    color: bisque;
+}
+
+/* Dark Mode Card - deep background with light text */
+.card {
+    background-color: #3E3A50;
+    /* Dark muted purple */
+    color: bisque;
+    /* Light text for contrast */
+
+    /* Aqua-toned glow instead of black shadow */
+    box-shadow: 0 4px 8px rgba(37, 222, 213, 0.4);
+    /* #25ded5 with opacity */
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Optional: Enhance text clarity on dark */
+    text-shadow: 1px 1px 2px rgba(37, 222, 213, 0.5);
+    /* Soft aqua shadow */
+}
+
+/* Card hover - lift effect with stronger aqua glow */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(80, 230, 220, 0.6);
+    /* #50e6dc brighter on hover */
+}
+
+.dark-mode-link {
+    color: #333 !important;
+}
+
+.dark-mode-link:hover {
+    color: bisque !important;
+}
+
+/* Navbar link text color - deep charcoal for dark mode */
+.navbar-dark .navbar-nav .nav-link {
+    color: #333;
+    /* Soft gray, lighter than #333 but not stark */
+    font-weight: bolder;
+    /* Clean and minimal */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect - lighter gray for contrast */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: bisque;
+    /* Soft light gray for hover */
+}
+
+/* Styling for table headers */
+table th {
+    background-color: #1d1b27;
+    text-align: center;
+}
+
+/* Styling for tool buttons */
+.tool-button {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hover effect for tool buttons */
+.tool-button:hover {
+    /* background-color: #4a8dc9; */
+    background-color: --primary-color-lighter;
+    color: bisque;
+}
+
+/* Section for the "Thank You" message */
+#thank-you {
+    text-align: center;
+    /* Center the text */
+    padding: 20px;
+    /* Spacing around the content */
+    background-color: #444;
+    /* Slightly lighter than body (#333) for subtle contrast */
+    color: beige;
+    /* Light gray for readable text */
+}
+
+/* Styling for the contact section */
+.contact {
+    text-align: center;
+    /* Center the text */
+    padding: 10px;
+    /* Visual separation */
+    color: #CCC;
+    /* Light gray text for dark background */
+}
+
+/* Styling for contact links */
+.contact a {
+    color: bisque;
+    /* Medium-light gray for links */
+    padding: 5px;
+    /* Spacing between links */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease;
+    /* Smooth color change on hover */
+}
+
+/* Hover effect for better user interaction */
+.contact a:hover {
+    color: #FFF;
+    /* White on hover for pop and visibility */
+}
+
+/* Hover effect for the second type of tool button */
+.tool-button-2:hover {
+    background-color: bisque;
+    color: #1d1b27;
+}
+
+/* Footer Section - Centers text, applies padding, and sets background color */
+.footer-section {
+    text-align: center;
+    /* Aligns text to the center */
+    padding: 10px;
+    /* Adds space inside the footer */
+    color: #333;
+    font-weight: bold;
+    /* Sets text color to white */
+    background-color: var(--primary-color);
+    /* Uses primary color for background */
+}

@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.js
 * Author: Madhurima Rawat
-* Date: July 15, 2024
+* Date: March 14, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, managing the
 *              behavior of a color switcher dropdown for dynamically changing the website's primary color,
 *              and animating social links wheel with dynamic updates to central icon and title.
@@ -99,6 +99,51 @@ function changeColor(color) {
             break;
         default:
             root.style.setProperty('--primary-color', '#6cb2eb'); // Default: Sky Blue
+    }
+}
+
+/**
+ * Function to toggle Dark Mode on and off.
+ * It dynamically adds or removes link elements
+ * that reference dark mode CSS files.
+ * 
+ * Note: The effect lasts only for the current session.
+ * Once the page is refreshed, it goes back to default light mode.
+ */
+function toggleDarkMode() {
+    const existingDarkMode = document.getElementById('dark-mode-stylesheet');
+    const existingHighlightsDarkMode = document.getElementById('highlights-dark-stylesheet');
+
+    // Enable dark mode if it's not currently active
+    if (!existingDarkMode && !existingHighlightsDarkMode) {
+
+        // Create link for the main dark mode stylesheet
+        const darkModeLink = document.createElement('link');
+        darkModeLink.rel = 'stylesheet';
+        darkModeLink.href = 'css/index-dark.css';
+        darkModeLink.id = 'dark-mode-stylesheet';
+        document.head.appendChild(darkModeLink);
+
+        // Create link for the career highlights dark mode stylesheet
+        const highlightsDarkModeLink = document.createElement('link');
+        highlightsDarkModeLink.rel = 'stylesheet';
+        highlightsDarkModeLink.href = 'css/career-highlights-dark.css';
+        highlightsDarkModeLink.id = 'highlights-dark-stylesheet';
+        document.head.appendChild(highlightsDarkModeLink);
+
+        console.log('Dark mode enabled');
+
+    } else {
+        // Disable dark mode by removing both stylesheets
+        if (existingDarkMode) {
+            existingDarkMode.remove();
+        }
+
+        if (existingHighlightsDarkMode) {
+            existingHighlightsDarkMode.remove();
+        }
+
+        console.log('Dark mode disabled');
     }
 }
 

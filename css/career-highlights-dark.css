@@ -1,0 +1,104 @@
+/*
+**********************************************************************************************
+ * File           : career-highlights-dark.css
+ * Author         : Madhurima Rawat
+ * Date Created   : March 14, 2025
+ * Version        : 1.0
+ * 
+ * Description    : 
+ *   Dark mode theme for the Career Highlights section of Madhurima Rawat's portfolio.
+ * 
+ * Features       :
+ *   - Dark palette with high contrast for readability
+ *   - Smooth hover transitions
+ *   - Responsive and mobile-friendly design
+ *   - Subtle shadows and glow for depth
+ * 
+ * GitHub Repo    : https://github.com/madhurimarawat/Portfolio-Website
+ **********************************************************************************************
+*/
+
+/* ============================== */
+/* ====== Header Styling  ======= */
+/* ============================== */
+
+header {
+    color: #333;
+    /* Dark gray text for headings */
+    padding-bottom: 0px;
+    /* Removes extra bottom space */
+}
+
+header p {
+    margin-bottom: -5px;
+    /* Pulls paragraph text closer to the header */
+}
+
+/* Contact links in header */
+header .contact a {
+    color: #333;
+    /* Dark gray links */
+}
+
+header .contact a:hover {
+    color: bisque;
+    /* Light beige on hover for emphasis */
+}
+
+/* ============================== */
+/* ====== Dropdown Styles  ====== */
+/* ============================== */
+
+.dropdown-toggle {
+    color: #333;
+    /* Dropdown trigger color */
+}
+
+.dropdown-menu {
+    background-color: #58536E;
+    /* Muted purple background for dropdown */
+}
+
+.dropdown-menu a {
+    color: bisque !important;
+    /* Light beige text links inside dropdown */
+}
+
+.dropdown-menu a:hover {
+    color: beige !important;
+    /* Lighter shade on hover for dropdown links */
+}
+
+/* ============================== */
+/* ====== Section Links   ======= */
+/* ============================== */
+
+section div a {
+    color: var(--primary-color);
+    /* Main color for links (custom property) */
+}
+
+section div a:hover {
+    color: var(--primary-color-lighter);
+    /* Lighter shade on hover */
+}
+
+/* ============================== */
+/* ====== Wheel Card Layout ===== */
+/* ============================== */
+
+.wheel {
+    background: #3E3A50;
+    /* Dark muted purple background */
+    /* Card takes full width and fits dark mode aesthetic */
+}
+
+/* ============================== */
+/* ====== Icon Styling     ====== */
+/* ============================== */
+
+.wheel .links i {
+    color: bisque;
+    /* Icon color for better contrast */
+    /* Use light tone icons over dark background for clarity */
+}

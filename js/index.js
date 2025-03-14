@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: March 04, 2025
+* Date: March 14, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -49,6 +49,52 @@ function changeColor(Color) {
 
   // Set the '--primary-color' CSS variable of the root element to the determined color
   document.documentElement.style.setProperty('--primary-color', color);
+}
+
+/**
+ * Function to toggle Dark Mode on and off.
+ * It dynamically adds or removes a link element
+ * that references the dark mode CSS file.
+ * 
+ * Note: The effect lasts only for the current session.
+ * Once the page is refreshed, it goes back to default light mode.
+ */
+function toggleDarkMode() {
+
+  // Look for an existing <link> tag with the id 'dark-mode-stylesheet'
+  // If it exists, it means dark mode is already active
+  const existingDarkMode = document.getElementById('dark-mode-stylesheet');
+
+  // If dark mode is NOT currently applied
+  if (!existingDarkMode) {
+
+    // Create a new <link> element to load the dark mode stylesheet
+    const darkModeLink = document.createElement('link');
+
+    // Set the relationship attribute to 'stylesheet'
+    darkModeLink.rel = 'stylesheet';
+
+    // Provide the path to your dark mode CSS file
+    darkModeLink.href = 'css/index-dark.css';
+
+    // Give the <link> tag an id so we can find or remove it later
+    darkModeLink.id = 'dark-mode-stylesheet';
+
+    // Append the newly created link to the <head> of the document
+    // This will immediately apply the dark mode styles
+    document.head.appendChild(darkModeLink);
+
+    // Optional: Log the action in the console for debugging
+    console.log('Dark mode enabled');
+
+  } else {
+    // If the dark mode stylesheet is already applied, remove it
+    // This effectively disables dark mode and reverts to light mode styles
+    existingDarkMode.remove();
+
+    // Optional: Log the action in the console for debugging
+    console.log('Dark mode disabled');
+  }
 }
 
 /* This function handles dropdown scrollings */

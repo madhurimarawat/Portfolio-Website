@@ -125,7 +125,80 @@
 }
 
 /* Styling for custom captions in the carousel */
-.custom-caption {
+.custom-caption-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Times New Roman', cursive;
+}
+
+.caption-content {
+    padding: 20px 30px;
+}
+
+/* Heading inside carousel caption */
+.caption-content h2 {
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.7);
+    /* Black text color */
+    font-size: 3.5em;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', cursive;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-toggle-btn {
+    padding: 10px 25px;
+    /* Spacing inside the button (top/bottom, left/right) */
+    font-size: 1rem;
+    /* Base font size for the button text */
+
+    border: none;
+    /* No border for a cleaner look */
+
+    background-color: #5C5470;
+    /* A muted deep mauve (pastel-inspired dark shade) 
+       Soft dark but not harsh like black or gray */
+
+    color: #ffffff;
+    /* White text for good contrast against the background */
+
+    border-radius: 8px;
+    /* Slightly more rounded edges for a softer appearance */
+
+    cursor: pointer;
+    /* Cursor changes to pointer on hover to indicate it's clickable */
+
+    transition: background-color 0.3s, transform 0.2s;
+    /* Smooth transition for background color and subtle movement on hover */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Soft shadow to lift the button slightly off the page */
+}
+
+.dark-toggle-btn:hover {
+    background-color: #7D6E83;
+    /* Lighter shade of the base color (a dusty lavender) for hover effect 
+       Gives subtle feedback without being too harsh */
+
+    transform: translateY(-2px);
+    /* Slight upward movement on hover for interactivity */
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow on hover to enhance the lifted effect */
+}
+
+/* Styling for custom captions in the carousel */
+.custom-caption-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -234,6 +307,7 @@ body {
     /* Slightly darker background on hover */
     transform: scale(1.05);
     /* Slight scale up effect on hover */
+    color: #333;
 }
 
 /* Styling for the second type of tool button */
@@ -472,6 +546,16 @@ section h5 {
 .contact a:hover {
     color: #555;
     /* Slightly darkens link color on hover */
+}
+
+/* Sections Link Color */
+section a {
+    color: var(--primary-color);
+}
+
+/* Sections Link Hover Color */
+section a:hover {
+    color: var(--primary-color-lighter);
 }
 
 /* To center align Typing svg */
