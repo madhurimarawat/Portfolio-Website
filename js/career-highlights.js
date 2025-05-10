@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.js
 * Author: Madhurima Rawat
-* Date: March 14, 2025
+* Date: May 10, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, managing the
 *              behavior of a color switcher dropdown for dynamically changing the website's primary color,
 *              and animating social links wheel with dynamic updates to central icon and title.
@@ -103,50 +103,64 @@ function changeColor(color) {
 }
 
 /**
- * Function to toggle Dark Mode on and off.
- * It dynamically adds or removes link elements
- * that reference dark mode CSS files.
- * 
- * Note: The effect lasts only for the current session.
- * Once the page is refreshed, it goes back to default light mode.
+ * Toggles Dark Mode with support for icon/text update and user preference saving.
  */
 function toggleDarkMode() {
-    const existingDarkMode = document.getElementById('dark-mode-stylesheet');
-    const existingHighlightsDarkMode = document.getElementById('highlights-dark-stylesheet');
+    const darkModeId = 'dark-mode-stylesheet';
+    const highlightsDarkModeId = 'highlights-dark-stylesheet';
 
-    // Enable dark mode if it's not currently active
-    if (!existingDarkMode && !existingHighlightsDarkMode) {
+    const toggleLink = document.getElementById('dark-mode-toggle');
+    const icon = toggleLink.querySelector('i');
+    const text = toggleLink.querySelector('.mode-text');
 
-        // Create link for the main dark mode stylesheet
-        const darkModeLink = document.createElement('link');
-        darkModeLink.rel = 'stylesheet';
-        darkModeLink.href = 'css/index-dark.css';
-        darkModeLink.id = 'dark-mode-stylesheet';
-        document.head.appendChild(darkModeLink);
+    const isDarkMode = !document.getElementById(darkModeId);
 
-        // Create link for the career highlights dark mode stylesheet
-        const highlightsDarkModeLink = document.createElement('link');
-        highlightsDarkModeLink.rel = 'stylesheet';
-        highlightsDarkModeLink.href = 'css/career-highlights-dark.css';
-        highlightsDarkModeLink.id = 'highlights-dark-stylesheet';
-        document.head.appendChild(highlightsDarkModeLink);
+    if (isDarkMode) {
+        // Enable dark mode
+        const darkStyle = document.createElement('link');
+        darkStyle.rel = 'stylesheet';
+        darkStyle.href = 'css/index-dark.css';
+        darkStyle.id = darkModeId;
+        document.head.appendChild(darkStyle);
 
-        console.log('Dark mode enabled');
+        const highlightsStyle = document.createElement('link');
+        highlightsStyle.rel = 'stylesheet';
+        highlightsStyle.href = 'css/career-highlights-dark.css';
+        highlightsStyle.id = highlightsDarkModeId;
+        document.head.appendChild(highlightsStyle);
 
+        if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+        if (text) text.textContent = ' Light Mode';
+
+        localStorage.setItem('colorMode', 'dark');
     } else {
-        // Disable dark mode by removing both stylesheets
-        if (existingDarkMode) {
-            existingDarkMode.remove();
-        }
+        // Disable dark mode
+        document.getElementById(darkModeId)?.remove();
+        document.getElementById(highlightsDarkModeId)?.remove();
 
-        if (existingHighlightsDarkMode) {
-            existingHighlightsDarkMode.remove();
-        }
+        if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+        if (text) text.textContent = ' Dark Mode';
 
-        console.log('Dark mode disabled');
+        localStorage.setItem('colorMode', 'light');
     }
 }
 
+/**
+ * Apply saved theme preference or system default on page load.
+ */
+function applyPreferredMode() {
+    const savedMode = localStorage.getItem('colorMode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
+        toggleDarkMode();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', applyPreferredMode);
+
+
+// For social links wheel
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.link');
     const totalLinks = links.length;

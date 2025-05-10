@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: March 14, 2025
+* Date: May 10, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -52,50 +52,105 @@ function changeColor(Color) {
 }
 
 /**
- * Function to toggle Dark Mode on and off.
- * It dynamically adds or removes a link element
- * that references the dark mode CSS file.
- * 
- * Note: The effect lasts only for the current session.
- * Once the page is refreshed, it goes back to default light mode.
+ * Toggles between dark and light mode.
+ * Applies a dark CSS file dynamically and updates the icon/text/button color.
+ * Saves the user's preference in localStorage.
+ * Uses system's prefers-color-scheme as a fallback on first load.
  */
 function toggleDarkMode() {
+  const darkModeId = 'dark-mode-stylesheet'; // ID for the dark mode stylesheet
 
-  // Look for an existing <link> tag with the id 'dark-mode-stylesheet'
-  // If it exists, it means dark mode is already active
-  const existingDarkMode = document.getElementById('dark-mode-stylesheet');
+  // Identify both toggle elements: navbar link and main button toggle
+  const navToggle = document.getElementById('dark-mode-toggle'); // Navbar toggle (link)
+  const btnToggle = document.getElementById('dark-mode-button'); // Main button toggle
 
-  // If dark mode is NOT currently applied
-  if (!existingDarkMode) {
+  // Detect if dark mode is already active by checking for the dark stylesheet
+  const isDarkModeActive = document.getElementById(darkModeId);
 
-    // Create a new <link> element to load the dark mode stylesheet
+  /**
+   * Helper function to update any toggle element's icon, text, and button color.
+   * @param {HTMLElement} element - Button or link element
+   * @param {string} mode - "dark" or "light"
+   */
+  function updateUI(element, mode) {
+    if (!element) return; // Check if the element exists
+
+    const icon = element.querySelector('i'); // Select the icon inside the element
+    const text = element; // For the button, the text is directly inside the button
+
+    // Swap icon and label
+    if (mode === 'dark') {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+      text.innerHTML = '<i class="fas fa-sun"></i> &nbsp; Light Mode'; // Change text to "Light Mode" when dark mode is active
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      text.innerHTML = '<i class="fas fa-moon"></i> &nbsp; Dark Mode'; // Change text to "Dark Mode" when light mode is active
+    }
+
+    // Only style elements with the 'dark-toggle-btn' class
+    if (element.classList.contains('dark-toggle-btn')) {
+      if (mode === 'dark') {
+        element.style.backgroundColor = '#FFA500'; // Dark mode button color
+      } else {
+        element.style.backgroundColor = '#5C5470'; // Light mode button color
+      }
+    }
+  }
+
+  if (!isDarkModeActive) {
+    // Dark mode not active → enable it by injecting <link> for dark mode styles
     const darkModeLink = document.createElement('link');
-
-    // Set the relationship attribute to 'stylesheet'
     darkModeLink.rel = 'stylesheet';
+    darkModeLink.href = 'css/index-dark.css'; // Path to your dark mode stylesheet
+    darkModeLink.id = darkModeId;
+    document.head.appendChild(darkModeLink); // Add the stylesheet to the head of the document
 
-    // Provide the path to your dark mode CSS file
-    darkModeLink.href = 'css/index-dark.css';
+    // Update both toggle buttons for dark mode
+    updateUI(navToggle, 'dark');
+    updateUI(btnToggle, 'dark');
 
-    // Give the <link> tag an id so we can find or remove it later
-    darkModeLink.id = 'dark-mode-stylesheet';
-
-    // Append the newly created link to the <head> of the document
-    // This will immediately apply the dark mode styles
-    document.head.appendChild(darkModeLink);
-
-    // Optional: Log the action in the console for debugging
+    // Save user preference in localStorage for persistence
+    localStorage.setItem('colorMode', 'dark');
     console.log('Dark mode enabled');
-
   } else {
-    // If the dark mode stylesheet is already applied, remove it
-    // This effectively disables dark mode and reverts to light mode styles
-    existingDarkMode.remove();
+    // Dark mode is active → disable it by removing the dark stylesheet
+    isDarkModeActive.remove();
 
-    // Optional: Log the action in the console for debugging
+    // Update both toggle buttons for light mode
+    updateUI(navToggle, 'light');
+    updateUI(btnToggle, 'light');
+
+    // Save user preference in localStorage for persistence
+    localStorage.setItem('colorMode', 'light');
     console.log('Dark mode disabled');
   }
 }
+
+/**
+ * On page load, apply user’s preferred mode.
+ * Priority: localStorage → prefers-color-scheme (system theme)
+ */
+function applyPreferredMode() {
+  const savedMode = localStorage.getItem('colorMode'); // Get saved mode from localStorage
+
+  // Check if a preference is saved in localStorage and apply it
+  if (savedMode === 'dark') {
+    toggleDarkMode(); // Apply dark mode if saved preference is dark
+  } else if (!savedMode) {
+    // No preference saved → check system theme using prefers-color-scheme
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+      toggleDarkMode(); // Apply dark if system theme prefers dark mode
+    }
+  }
+}
+
+// Run when DOM is ready, to apply the preferred mode
+document.addEventListener('DOMContentLoaded', applyPreferredMode);
+
 
 /* This function handles dropdown scrollings */
 $(document).ready(function () {
