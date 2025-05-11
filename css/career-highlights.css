@@ -525,3 +525,21 @@ section div a:hover {
     /* Ensure the image appears above the pseudo-element */
     object-fit: contain;
 }
+
+/* 
+  This media query targets environments where forced colors are enabled.
+  Forced colors mode is typically used for accessibility, like Windows High Contrast Mode.
+*/
+@media (forced-colors: active) {
+
+    /* 
+      This rule ensures that the browser does not override your custom colors 
+      (like those defined in your dark/light mode styles) with system colors.
+      
+      `forced-color-adjust: none` tells the browser to respect your stylesheet colors.
+      The `!important` ensures it overrides other conflicting rules.
+    */
+    * {
+        forced-color-adjust: none !important;
+    }
+}
