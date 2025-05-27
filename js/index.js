@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: May 10, 2025
+* Date: May 27, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -82,11 +82,11 @@ function toggleDarkMode() {
     if (mode === 'dark') {
       icon.classList.remove('fa-moon');
       icon.classList.add('fa-sun');
-      text.innerHTML = '<i class="fas fa-sun"></i> &nbsp; Light Mode'; // Change text to "Light Mode" when dark mode is active
+      text.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; // Change text to "Light Mode" when dark mode is active
     } else {
       icon.classList.remove('fa-sun');
       icon.classList.add('fa-moon');
-      text.innerHTML = '<i class="fas fa-moon"></i> &nbsp; Dark Mode'; // Change text to "Dark Mode" when light mode is active
+      text.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; // Change text to "Dark Mode" when light mode is active
     }
 
     // Only style elements with the 'dark-toggle-btn' class
