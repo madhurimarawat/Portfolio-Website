@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: May 27, 2025
+* Date: May 28, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -25,31 +25,42 @@
  */
 
 // "Life is too short to be using just one color!"
-// This function takes the color from the index page and then returns the variable value according to that
+// This function sets the primary color CSS variable based on the provided theme string
 function changeColor(Color) {
-  let color;
+  let colorValue;
 
-  // Determine the color based on the provided Color parameter
+  // Store the selected theme in localStorage
+  localStorage.setItem('selectedTheme', Color); // 📦 Save theme selection
+
+  // Map the season to its corresponding color
   switch (Color) {
     case 'autumn':
-      color = 'coral'; // Autumn: Coral
+      colorValue = 'coral'; // 🍁 Autumn: Coral
       break;
     case 'summer':
-      color = '#FFD700'; // Summer: Gold
+      colorValue = '#FFD700'; // 🌞 Summer: Gold
       break;
     case 'rainy':
-      color = '#00CED1'; // Rainy: Dark Turquoise
+      colorValue = '#00CED1'; // 🌧️ Rainy: Dark Turquoise
       break;
     case 'winter':
-      color = 'rgb(242, 82, 175)';  // Winter: Deep Pink
+      colorValue = 'rgb(242, 82, 175)'; // ⛄ Winter: Deep Pink
       break;
     default:
-      color = '#6cb2eb'; // Default color (sky blue)
+      colorValue = '#6cb2eb'; // 🔷 Default: Sky Blue
   }
 
-  // Set the '--primary-color' CSS variable of the root element to the determined color
-  document.documentElement.style.setProperty('--primary-color', color);
+  // Apply the chosen color to the root CSS variable
+  document.documentElement.style.setProperty('--primary-color', colorValue);
 }
+
+// Apply saved theme when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('selectedTheme');
+  if (savedTheme) {
+    changeColor(savedTheme); // 🚀 Load and apply the stored theme
+  }
+});
 
 /**
  * Toggles between dark and light mode.

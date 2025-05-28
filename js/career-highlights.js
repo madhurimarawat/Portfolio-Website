@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.js
 * Author: Madhurima Rawat
-* Date: May 10, 2025
+* Date: May 28, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, managing the
 *              behavior of a color switcher dropdown for dynamically changing the website's primary color,
 *              and animating social links wheel with dynamic updates to central icon and title.
@@ -79,28 +79,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Function to change the root element's primary color variable
+// Function to change the root element's primary color variable and store the preference
 function changeColor(color) {
-    let root = document.documentElement; // Access the root element of the document (e.g., <html>)
+    let root = document.documentElement; // Access the root element (usually <html>)
 
-    // Change primary color variable based on selected color
+    // Save the selected theme to localStorage
+    localStorage.setItem('selectedTheme', color); // 🌈 Save the current theme
+
+    // Update the CSS variable '--primary-color' based on the selected theme
     switch (color) {
         case 'autumn':
-            root.style.setProperty('--primary-color', 'coral'); // Autumn: Coral
+            root.style.setProperty('--primary-color', 'coral'); // 🍂 Autumn: Coral
             break;
         case 'summer':
-            root.style.setProperty('--primary-color', '#FFD700'); // Summer: Gold
+            root.style.setProperty('--primary-color', '#FFD700'); // ☀️ Summer: Gold
             break;
         case 'rainy':
-            root.style.setProperty('--primary-color', '#00CED1'); // Rainy: Dark Turquoise
+            root.style.setProperty('--primary-color', '#00CED1'); // 🌧️ Rainy: Dark Turquoise
             break;
         case 'winter':
-            root.style.setProperty('--primary-color', 'rgb(242, 82, 175)'); // Winter: Deep Pink
+            root.style.setProperty('--primary-color', 'rgb(242, 82, 175)'); // ❄️ Winter: Deep Pink
             break;
         default:
-            root.style.setProperty('--primary-color', '#6cb2eb'); // Default: Sky Blue
+            root.style.setProperty('--primary-color', '#6cb2eb'); // 🔵 Default: Sky Blue
     }
 }
+
+// Automatically apply the saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        changeColor(savedTheme); // Apply saved theme on load
+    }
+});
 
 /**
  * Toggles Dark Mode with support for icon/text update and user preference saving.
