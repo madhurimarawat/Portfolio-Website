@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: May 28, 2025
+* Date: May 31, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -29,8 +29,8 @@
 function changeColor(Color) {
   let colorValue;
 
-  // Store the selected theme in localStorage
-  localStorage.setItem('selectedTheme', Color); // 📦 Save theme selection
+  // Store the selected theme in localStorage with a specific key
+  localStorage.setItem('madhurima-portfolio-website-theme', Color); // 📦 Save theme selection
 
   // Map the season to its corresponding color
   switch (Color) {
@@ -56,11 +56,12 @@ function changeColor(Color) {
 
 // Apply saved theme when the page loads
 window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('selectedTheme');
+  const savedTheme = localStorage.getItem('madhurima-portfolio-website-theme');
   if (savedTheme) {
     changeColor(savedTheme); // 🚀 Load and apply the stored theme
   }
 });
+
 
 /**
  * Toggles between dark and light mode.
@@ -123,7 +124,7 @@ function toggleDarkMode() {
     updateUI(btnToggle, 'dark');
 
     // Save user preference in localStorage for persistence
-    localStorage.setItem('colorMode', 'dark');
+    localStorage.setItem('madhurima-portfolio-website-colorMode', 'dark');
     console.log('Dark mode enabled');
   } else {
     // Dark mode is active → disable it by removing the dark stylesheet
@@ -134,7 +135,7 @@ function toggleDarkMode() {
     updateUI(btnToggle, 'light');
 
     // Save user preference in localStorage for persistence
-    localStorage.setItem('colorMode', 'light');
+    localStorage.setItem('madhurima-portfolio-website-colorMode', 'light');
     console.log('Dark mode disabled');
   }
 }
@@ -144,7 +145,7 @@ function toggleDarkMode() {
  * Priority: localStorage → prefers-color-scheme (system theme)
  */
 function applyPreferredMode() {
-  const savedMode = localStorage.getItem('colorMode'); // Get saved mode from localStorage
+  const savedMode = localStorage.getItem('madhurima-portfolio-website-colorMode'); // Get saved mode from localStorage
 
   // Check if a preference is saved in localStorage and apply it
   if (savedMode === 'dark') {
