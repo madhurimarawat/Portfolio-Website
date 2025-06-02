@@ -27,6 +27,15 @@
 <html lang="en">
 
 <head>
+
+  <!--
+        The <base> tag sets the base URL for all relative paths.
+         moves up two folders from current file.
+        Use it to correctly link CSS/JS from nested pages.
+        Only one <base> allowed, placed inside <head>.
+      -->
+  <base href="{{ site.baseurl }}/">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
