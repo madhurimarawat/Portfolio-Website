@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: index.css
 * Author: Madhurima Rawat
-* Date: May 11, 2025
+* Date: June 2, 2025
 * Description: Stylesheet for Madhurima Rawat's personal portfolio website, including
 *              responsive design, hover effects, color schemes, and layout adjustments.
 * Version: 1.0
@@ -117,6 +117,18 @@
     /* Set hover background color */
     color: black;
     /* Set hover text color */
+}
+
+/* Show dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* optional: remove gap */
+}
+
+/* Optional: smooth appearance */
+.dropdown-menu {
+    transition: all 0.3s ease-in-out;
 }
 
 /* Positioning for carousel items */
