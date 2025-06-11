@@ -25,40 +25,40 @@
  */
 
 // "Life is too short to be using just one color!"
-// This function sets the primary color CSS variable based on the provided theme string
-function changeColor(Color) {
-  let colorValue;
+// Function to set primary color
+function changeColor(Color, event) {
+  if (event) event.preventDefault(); // 🔒 Prevent form submission or default action
 
-  // Store the selected theme in localStorage with a specific key
-  localStorage.setItem('madhurima-portfolio-website-theme', Color); // 📦 Save theme selection
+  const scrollY = window.scrollY;
+  localStorage.setItem('madhurima-portfolio-website-theme', Color);
 
-  // Map the season to its corresponding color
-  switch (Color) {
-    case 'autumn':
-      colorValue = 'coral'; // 🍁 Autumn: Coral
-      break;
-    case 'summer':
-      colorValue = '#FFD700'; // 🌞 Summer: Gold
-      break;
-    case 'rainy':
-      colorValue = '#00CED1'; // 🌧️ Rainy: Dark Turquoise
-      break;
-    case 'winter':
-      colorValue = 'rgb(242, 82, 175)'; // ⛄ Winter: Deep Pink
-      break;
-    default:
-      colorValue = '#6cb2eb'; // 🔷 Default: Sky Blue
-  }
-
-  // Apply the chosen color to the root CSS variable
+  const colorValue = getColorValue(Color);
   document.documentElement.style.setProperty('--primary-color', colorValue);
+
+  window.scrollTo({ top: scrollY, behavior: 'auto' });
 }
 
-// Apply saved theme when the page loads
+// Helper function to map theme to color
+function getColorValue(theme) {
+  switch (theme) {
+    case 'autumn':
+      return 'coral';
+    case 'summer':
+      return '#FFD700';
+    case 'rainy':
+      return '#00CED1';
+    case 'winter':
+      return 'rgb(242, 82, 175)';
+    default:
+      return '#6cb2eb';
+  }
+}
+
+// Apply stored theme on page load
 window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('madhurima-portfolio-website-theme');
   if (savedTheme) {
-    changeColor(savedTheme); // 🚀 Load and apply the stored theme
+    document.documentElement.style.setProperty('--primary-color', getColorValue(savedTheme));
   }
 });
 
