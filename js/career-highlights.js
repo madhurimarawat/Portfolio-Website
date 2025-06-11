@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.js
 * Author: Madhurima Rawat
-* Date: May 28, 2025
+* Date: June 11, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, managing the
 *              behavior of a color switcher dropdown for dynamically changing the website's primary color,
 *              and animating social links wheel with dynamic updates to central icon and title.
