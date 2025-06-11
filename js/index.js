@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: index.js
 * Author: Madhurima Rawat
-* Date: May 31, 2025
+* Date: June 11, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically change color schemes based on user-selected seasons.
 *              Also handles the spacing when a section is clicked with respect to navigation bar.
@@ -188,6 +188,13 @@ $(document).ready(function () {
 
   // Handle click event for dropdown items within the "Profile" section
   $("#navbarDropdownProfile + .dropdown-menu a.dropdown-item").on('click', function (event) {
+    var target = $(this).attr("href");
+
+    // Skip if href is just "#"
+    if (target === "#") {
+      return;
+    }
+
     // Check if the clicked item has the class 'dev'
     if ($(this).hasClass('dev')) {
       // Allow the default action (opening in a new tab)
@@ -195,8 +202,6 @@ $(document).ready(function () {
     } else {
       // Prevent the default action (not open in a new tab)
       event.preventDefault();
-
-      var target = $(this).attr("href");
       smoothScroll(event, target);
     }
   });
@@ -204,9 +209,16 @@ $(document).ready(function () {
   // Handle click event for direct navigation items
   $(".nav-item a.nav-link").on('click', function (event) {
     var target = $(this).attr("href");
+
+    // Skip if href is just "#"
+    if (target === "#") {
+      return;
+    }
+
     smoothScroll(event, target);
   });
 });
+
 
 // Run when DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
