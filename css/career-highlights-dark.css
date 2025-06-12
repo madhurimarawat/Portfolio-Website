@@ -2,7 +2,7 @@
 **********************************************************************************************
  * File           : career-highlights-dark.css
  * Author         : Madhurima Rawat
- * Date Created   : March 14, 2025
+ * Date Created   : June 12, 2025
  * Version        : 1.0
  * 
  * Description    : 
@@ -43,6 +43,10 @@ header .contact a {
 header .contact a:hover {
     color: bisque;
     /* Light beige on hover for emphasis */
+}
+
+.spacer-class {
+    padding-top: 12px;
 }
 
 /* ============================== */

@@ -2,7 +2,7 @@
 *********************************************************************************************
 * File: career-highlights.css
 * Author: Madhurima Rawat
-* Date: June 11, 2025
+* Date: June 12, 2025
 * Description: Stylesheet for the career highlights section on Madhurima Rawat's personal portfolio 
 *              website, including responsive design, hover effects, color schemes, and layout adjustments.
 *              This stylesheet defines styles for headers, sections, tables, cards, and a rotating wheel 
@@ -166,12 +166,15 @@ header .contact a:hover {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 130px;
     /* Adjust based on the header height */
     color: #333;
     background-color: #FFFFF0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+.spacer-class {
+    padding-top: 130px;
 }
 
 /* Section styling */
@@ -288,6 +291,10 @@ section div a:hover {
 
 /* Styles for screens up to 600px */
 @media (max-width: 600px) {
+
+    .spacer-class {
+        padding-top: 25px;
+    }
 
     header {
         width: auto;
