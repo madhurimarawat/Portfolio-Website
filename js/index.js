@@ -220,132 +220,152 @@ $(document).ready(function () {
 });
 
 
-// Run when DOM content is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to center align elements using Flexbox
-  function centerAlignContentRow(id) {
-    var contentRow = document.getElementById(id);
-    if (contentRow) {
-      contentRow.classList.add("d-flex", "justify-content-center");
-    }
+/**
+ * 🎯 Center-align all rows with the class "center-content" using Bootstrap Flexbox
+ */
+function centerAlignContentRows() {
+  const contentRows = document.querySelectorAll('.center-content');
+  if (contentRows.length === 0) {
+    console.warn("⚠️ No elements found with class 'center-content'.");
   }
+  contentRows.forEach(row => {
+    row.classList.add("d-flex", "justify-content-center");
+    console.log(`✅ Centered: ${row.id || 'unnamed row'} using Flexbox.`);
+  });
+}
 
-  // Apply to both contentRow_1 and contentRow_2
-  centerAlignContentRow("contentRow_1");
-  centerAlignContentRow("contentRow_2");
-  centerAlignContentRow("contentRow_3");
-});
 
-/* This handles the social links wheel section */
-document.addEventListener('DOMContentLoaded', () => {
+// ❌ Do NOT call it here if elements are dynamically injected later
+// ✅ Instead, call this manually after all sections are loaded
+// Example (in section-add.js): centerAlignContentRows();
+
+
+/* 🌐 This handles the social links wheel section */
+/**
+ * 🔄 Social Links Wheel Section
+ * Encapsulated in a global function so it can be re-run on dynamic load (like for SPAs)
+ */
+function initSocialWheelAnimation() {
+  // 🔗 Select all circular links
   const links = document.querySelectorAll('.link');
   const totalLinks = links.length;
-  const centerRotationDuration = 3000; // Duration for each link to stay in center
-  const radius = 150; // Distance of icons from center
-  const rotationSpeed = 0.5; // Speed of the rotation (in degrees per frame)
-  const initialDisplayDuration = 1000; // Duration for initial central icon to be displayed (in milliseconds)
-  const extendedDisplayDuration = 5000; // Duration for extended visibility of icons in the center (in milliseconds)
+
+  // ⏱️ Timing & animation configuration
+  const centerRotationDuration = 3000; // ⏰ Time between each center change
+  const radius = 150; // 📏 Distance of links from center
+  const rotationSpeed = 0.5; // 🎡 Speed of continuous circular rotation
+  const initialDisplayDuration = 1000; // ⏳ Delay before the first center rotation
+  const extendedDisplayDuration = 5000; // 🕰️ Extended view time after animation starts
+
+  // 🖼️ Default central icon setup
   const initialImageSrc = 'https://ouch-cdn2.icons8.com/7t1OP99ujxbijKLclt_j8lXv5sNR8Ob4utsa-QRFnf0/rs:fit:435:456/extend:false/wm:1:re:0:0:0.8/wmid:ouch/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTA0/L2RjMWUzN2RiLWM1/NzctNGY0Mi05ZWFj/LWVkMWRlYjJkMDAw/Yy5zdmc.png';
-  const initialTitle = 'Central Title';
-  const initialHref = '#';
-  const sectionId = 'social-links'; // ID of the section to animate
+  const initialTitle = 'Central Title'; // 🏷️ Title for default icon
+  const initialHref = '#'; // 🔗 Default href
+  const sectionId = 'social-links'; // 🆔 Section to observe
 
+  // 🔄 State tracking
   let currentIndex = 0;
-  let angle = 0; // Initial rotation angle
+  let angle = 0;
   let rotationInterval;
-  let isAnimating = false; // Track if the animation has started
-  let animationTimeout; // Track the timeout for extending icon visibility
+  let isAnimating = false;
+  let animationTimeout;
 
+  // 📍Position all links around the circle
   function updateLinksPosition() {
-    const angleStep = 360 / totalLinks;
-
+    const angleStep = 360 / totalLinks; // 📐 Equal spacing
     links.forEach((link, index) => {
       const rotation = angleStep * index + angle;
-      link.style.transform = `rotate(${rotation}deg) translateX(${radius}px) rotate(-${rotation}deg)`;
+      link.style.transform = `rotate(${rotation}deg) translateX(${radius}px) rotate(-${rotation}deg)`; // 💫 Keep upright
     });
   }
 
+  // 🎯 Rotate central icon based on current link
   function rotateCenter() {
     const centralImage = document.querySelector('.center img');
     const centralLink = document.querySelector('.center a');
 
     if (currentIndex === 0) {
-      // Reset to initial image after all links have been shown
+      // 🔁 Back to original icon after full cycle
       centralImage.src = initialImageSrc;
       centralImage.title = initialTitle;
       centralLink.href = initialHref;
       centralLink.title = initialTitle;
-      centralLink.setAttribute('title', initialTitle); // Ensure title attribute is updated
+      centralLink.setAttribute('title', initialTitle);
     } else {
       const currentLink = links[currentIndex - 1];
       const newImageSrc = currentLink.querySelector('img').src;
       const newHref = currentLink.href;
       const newTitle = currentLink.title;
 
-      // Update the central image src and link attributes
+      // 🖼️ Update center content to match current link
       centralImage.src = newImageSrc;
       centralImage.title = newTitle;
       centralLink.href = newHref;
       centralLink.title = newTitle;
-      centralLink.setAttribute('title', newTitle); // Ensure title attribute is updated
+      centralLink.setAttribute('title', newTitle);
 
+      // 🔍 Highlight active link
       links.forEach((link, index) => {
-        link.classList.remove('scale'); // Remove scaling from all links
+        link.classList.remove('scale');
         if (index === currentIndex - 1) {
-          link.classList.add('scale'); // Add scaling to the current link
+          link.classList.add('scale'); // 🌟 Add scale effect
         }
       });
     }
 
-    currentIndex = (currentIndex + 1) % (totalLinks + 1);
+    currentIndex = (currentIndex + 1) % (totalLinks + 1); // ⏭️ Cycle to next
   }
 
+  // 🎠 Animate the circular wheel
   function animateRotation() {
-    angle = (angle + rotationSpeed) % 360; // Update rotation angle
-    updateLinksPosition(); // Update positions of the links
-    requestAnimationFrame(animateRotation); // Request the next frame
+    angle = (angle + rotationSpeed) % 360; // 🔁 Keep spinning
+    updateLinksPosition(); // 🎯 Reposition links
+    requestAnimationFrame(animateRotation); // 🎬 Next frame
   }
 
+  // 🚀 Start everything!
   function startAnimation() {
     if (!isAnimating) {
-      // Start the rotation animation
-      animateRotation();
+      animateRotation(); // 🔄 Start wheel spin
 
-      // Display the initial central icon for a set duration, then start the periodic rotation
+      // ⏳ Initial delay, then begin center rotation
       setTimeout(() => {
-        rotateCenter(); // Rotate center once after the initial delay
-        rotationInterval = setInterval(rotateCenter, centerRotationDuration); // Start the periodic rotation
+        rotateCenter();
+        rotationInterval = setInterval(rotateCenter, centerRotationDuration); // ⌚ Regular center updates
       }, initialDisplayDuration);
 
-      isAnimating = true; // Set the flag to true indicating that animation has started
+      isAnimating = true;
 
-      // Extend visibility of central icon
+      // 🕔 Extra timeout to extend first icon view
       if (animationTimeout) clearTimeout(animationTimeout);
       animationTimeout = setTimeout(() => {
-        rotateCenter(); // Extend visibility by rotating center once more
+        rotateCenter(); // 🌀 One more rotation after extended display
       }, extendedDisplayDuration);
     }
   }
 
-  // Listen for click events on navigation links
+  // 🔗 Trigger via internal link click
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       if (e.target.getAttribute('href').substring(1) === sectionId) {
-        document.getElementById(sectionId).classList.add('active');
-        startAnimation();
+        document.getElementById(sectionId).classList.add('active'); // ✅ Mark section as active
+        startAnimation(); // 🎬 Start when clicked
       }
     });
   });
 
-  // Listen for scroll events to trigger the animation when section is in view
+  // 👀 Trigger on scroll into view
   window.addEventListener('scroll', () => {
     const section = document.getElementById(sectionId);
     const sectionPosition = section.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
     if (sectionPosition.top <= viewportHeight && sectionPosition.bottom >= 0) {
-      document.getElementById(sectionId).classList.add('active');
-      startAnimation();
+      document.getElementById(sectionId).classList.add('active'); // 👁️ Section visible
+      startAnimation(); // 🚦 Begin animation on scroll into view
     }
   });
-});
+}
+
+// 🟢 Immediately run the animation initializer after it's defined
+initSocialWheelAnimation();

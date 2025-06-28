@@ -1,0 +1,108 @@
+<!--
+*********************************************************************************************
+* File: header.html
+* Author: Madhurima Rawat
+* Date: June 28, 2025
+* Description: Reusable header component containing the navigation bar, logo, and dropdown menu.
+* Version: 1.0
+* GitHub Repository: https://github.com/madhurimarawat/Portfolio-Website
+* Comments: Responsive site header with links to different sections and color theme selector. 🧭
+*********************************************************************************************
+-->
+
+<!-- Navigation Bar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/Programmer Illustration.jpg" width="80" height="80" alt="Logo" loading="eager" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfile" role="button"
+                    data-toggle="dropdown" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+                    <a class="dropdown-item" href="#About_me">About Me</a>
+                    <a class="dropdown-item" href="#Education">Education</a>
+                    <a class="dropdown-item" href="#skills">Skills</a>
+                    <a class="dropdown-item" href="#certifications">Certifications</a>
+                    <a class="dropdown-item dev" href="https://madhurima-devfolio.streamlit.app/" target="_blank"
+                        rel="noopener noreferrer">Devfolio</a>
+                    <a class="dropdown-item" href="#social-links">Socials</a>
+                    <a class="dropdown-item" href="#blogs-links">Blogs</a>
+                    <a class="dropdown-item" href="#hobbies-and-interests">Hobbies</a>
+                </div>
+            </li>
+            <li class="nav-item Experience">
+                <a class="nav-link" href="#experience">Experience</a>
+            </li>
+
+            <li class="nav-item Projects">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="https://drive.google.com/file/d/1EYrjwt8p55lhdj78in0dio0IwTDdsPAL/view?usp=sharing">Resume</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="career-highlights">Career Highlights</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#About me" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-expanded="false">
+                    Theme
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); changeColor('autumn')"><i
+                            class="fas fa-leaf"></i>&nbsp;Autumn</a>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); changeColor('summer')"><i
+                            class="fas fa-sun"></i>&nbsp;Summer</a>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); changeColor('rainy')"><i
+                            class="fas fa-cloud-showers-heavy"></i>&nbsp;Rainy</a>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); changeColor('winter')"><i
+                            class="fas fa-snowflake"></i>&nbsp;Winter</a>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); changeColor()"><i
+                            class="fas fa-sync-alt"></i>&nbspDefault</a>
+                </div>
+            </li>
+
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="mailto:rawatmadhurima@gmail.com">
+                    <i class="fa fa-envelope"></i> Email
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dark-mode-link" href="#" onclick="event.preventDefault(); toggleDarkMode()"
+                    id="dark-mode-toggle">
+                    <i class="fa fa-moon"></i> <span>Dark Mode</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/madhurimarawat" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://linkedin.com/in/madhurima-rawat" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://linktr.ee/madhurima_rawat" target="_blank"><i
+                        class="fa fa-link"></i>LinkTree</a>
+            </li>
+        </ul>
+    </div>
+</nav>
