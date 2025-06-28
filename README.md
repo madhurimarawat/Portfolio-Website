@@ -51,24 +51,44 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 ## Directory Structure
 
-```
-Portfolio-Website/
-├── index.html                # Main landing page of the portfolio website
-├── career-highlights.html    # Page dedicated to career highlights and achievements
+```bash
+📁 Portfolio-Website/
+├── index.html                 # 🏠 Main landing page of the portfolio website
+├── career-highlights.html     # 🏆 Page dedicated to career highlights and achievements
 │
-├── css/
-│   ├── index.css             # Stylesheet for index.html
-│   └── career-highlights.css # Stylesheet for career-highlights.html
+├── 📁 css/                    # 💅 Stylesheets
+│   ├── index.css              # 🎨 Stylesheet for index.html
+│   └── career-highlights.css  # 🏅 Stylesheet for career-highlights.html
 │
-├── js/
-│ ├── index.js                # Script to dynamically change the primary color of the website
-│ └── career-highlights.js    # Script to manage the visibility of the color 
+├── 📁 js/                     # 📜 JavaScript files
+│   ├── index.js               # 🎛️ Script for dynamic color changes and navbar adjustments
+│   ├── career-highlights.js   # 👁️‍🗨️ Script for controlling color modes on highlights page
+│   └── section-add.js         # 🧩 Script to dynamically load modular sections into index.html
 │
-├── images/                   # Folder containing all images used in the website
+├── 📁 images/                 # 🖼️ All images used in the website (logos, project thumbnails, etc.)
 │
-├── LICENSE                   # MIT License file
+├── 📁 components/             # 🧱 Reusable components (like header.html, footer.html, slider-carousel.html)
+│   ├── header.html            # 🔝 Navigation bar and header section
+│   ├── footer.html            # 🔻 Footer section with social/contact info
+│   └── slider-carousel.html   # 🎞️ Animated slider carousel for landing section
 │
-└── README.md                 # Documentation file for the repository
+├── 📁 sections/               # 📦 All content sections loaded dynamically (About, Projects, etc.)
+│   ├── about-me.html          # 👩‍💻 About Me section
+│   ├── education.html         # 🎓 Academic background and degrees
+│   ├── skills.html            # 🛠️ Technical and soft skills list
+│   ├── certifications.html    # 📑 Certifications and credentials
+│   ├── experience.html        # 💼 Work experience and internships
+│   ├── projects.html          # 🧪 Project showcases with descriptions
+│   ├── social-links.html      # 🎡 Section with animated social media wheel
+│   ├── blogs-links.html       # ✍️ Blog post links or guest articles
+│   ├── hobbies-and-interests.html # 🎨 Hobbies, interests, and creative pursuits
+│   └── thank-you.html         # 🙏 Closing message or thank-you note
+│
+├── 📁 seo/                    # 🔍 SEO-related files
+│   └── meta-tags.html         # 🧠 Meta tags for head section (title, description, keywords)
+│
+├── LICENSE                    # 📜 MIT License
+├── README.md                  # 📘 Documentation file for repository overview, usage, and setup
 ```
 
 ### Files and Folders
