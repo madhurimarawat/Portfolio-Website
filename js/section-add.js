@@ -1,7 +1,7 @@
 /*********************************************************************************************
 * File: section-add.js
 * Author: Madhurima Rawat
-* Date: June 28, 2025
+* Date: July 17, 2025
 * Description: JavaScript file for Madhurima Rawat's personal portfolio website, providing
 *              functionality to dynamically load all major sections from external HTML files.
 * Version: 1.2
@@ -16,13 +16,6 @@
 $('.header-class').load('components/header.html', () => console.log('✅ Loaded: header.html'));
 $('.slider-carousel').load('components/slider-carousel.html', () => console.log('✅ Loaded: slider-carousel.html'));
 $('.footer').load('components/footer.html', () => console.log('✅ Loaded: footer.html'));
-
-// 🔍 Load SEO meta tags (for head section)
-$('head').prepend('<div class="meta-placeholder"></div>');
-$('.meta-placeholder').load('seo/meta-tags.html', function () {
-    $('.meta-placeholder').children().unwrap(); // 👈 Remove wrapper div after injecting
-    console.log('✅ Loaded: meta-tags.html');
-});
 
 // 📦 List of all sections and their corresponding HTML paths
 const sections = [
