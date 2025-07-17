@@ -84,9 +84,6 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 │   ├── hobbies-and-interests.html # 🎨 Hobbies, interests, and creative pursuits
 │   └── thank-you.html         # 🙏 Closing message or thank-you note
 │
-├── 📁 seo/                    # 🔍 SEO-related files
-│   └── meta-tags.html         # 🧠 Meta tags for head section (title, description, keywords)
-│
 ├── LICENSE                    # 📜 MIT License
 ├── README.md                  # 📘 Documentation file for repository overview, usage, and setup
 ```
