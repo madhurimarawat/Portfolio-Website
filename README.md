@@ -9,7 +9,7 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 3](website_snapshots/website_3.png)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/9e3449e2-ec05-4e9a-8972-dc53ed0dd776" width = "100%" title = "Portfolio Website Social Links Section" alt = "Portfolio Website Social Links Section"></a>
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="website_snapshots/Social_Icons_Animation.gif" width = "100%" title = "Portfolio Website Social Links Section" alt = "Portfolio Website Social Links Section"></a>
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/87d676c9-ef78-40a8-9f03-528f871ec44c" width = "100%" title = "Portfolio Website Themes Section" alt = "Portfolio Website Themes Section"></a>
 
