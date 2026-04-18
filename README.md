@@ -18,6 +18,8 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="website_snapshots/home-page-dark-mode.gif" width = "100%" title = "Portfolio Website Dark Mode" alt = "Portfolio Website Dark Mode"></a>
 
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 5](website_snapshots/website_5.png)</a>
+
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Career Highlights Snapshot](website_snapshots/website_6.png)</a>
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src ="https://github.com/user-attachments/assets/4c985b45-1a93-4c7e-b25e-44de70adca58" width = "100%" title = "Career Highlights Social Links" alt = "Career Highlights Social Links"></a>
