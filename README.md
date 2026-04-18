@@ -2,6 +2,7 @@
 This portfolio showcases my work with creative emoji elements, a harmonious blend of professional colors, and a dedicated section for career highlights, presenting my technical skills.
 
 <p align="center">
+    <a href="https://github.com/madhurimarawat/Portfolio-Website/blob/main/How_To_Customize.md">
 <img src="https://img.shields.io/badge/Sections-10%2B-f5a3d1?style=for-the-badge&labelColor=80e5e7" />
 <img src="https://img.shields.io/badge/Components-2%2B-a9d3f5?style=for-the-badge&labelColor=ffe680" />
 <img src="https://img.shields.io/badge/Themes-4%2B-f7a8a3?style=for-the-badge&labelColor=f5a3d1" />
@@ -10,8 +11,16 @@ This portfolio showcases my work with creative emoji elements, a harmonious blen
 <img src="https://img.shields.io/badge/UI-Card%20Based-f5a3d1?style=for-the-badge&labelColor=80e5e7" />
 <img src="https://img.shields.io/badge/Design-Clean%20%26%20Modern-a9d3f5?style=for-the-badge&labelColor=ffe680" />
 <img src="https://img.shields.io/badge/Type-Modular-80e5e7?style=for-the-badge&labelColor=f5a3d1" />
-<img src="https://img.shields.io/badge/Made%20By-Madhurima%20Rawat-f7a8a3?style=for-the-badge&labelColor=a9d3f5" />
+<img src="https://img.shields.io/badge/Made%20By-Madhurima%20Rawat-f7a8a3?style=for-the-badge&labelColor=a9d3f5" /></a>
 </p>
+
+> [!TIP]
+> 🚀 Make this portfolio truly yours in 2 steps:
+>
+> 🛠️ Step 1: Customize it → [How_To_Customize.md](./How_To_Customize.md)  
+> 🌐 Step 2: Deploy it → [How_To_Deploy.md](./How_To_Deploy.md)
+>
+> ✨ Build → Customize → Deploy → Share
 
 <h2>Website Design</h2>
 
