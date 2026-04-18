@@ -1,11 +1,25 @@
 # Portfolio-Website
 This portfolio showcases my work with creative emoji elements, a harmonious blend of professional colors, and a dedicated section for career highlights, presenting my technical skills.
 
+<p align="center">
+<img src="https://img.shields.io/badge/Sections-10%2B-f5a3d1?style=for-the-badge&labelColor=80e5e7" />
+<img src="https://img.shields.io/badge/Components-2%2B-a9d3f5?style=for-the-badge&labelColor=ffe680" />
+<img src="https://img.shields.io/badge/Themes-4%2B-f7a8a3?style=for-the-badge&labelColor=f5a3d1" />
+<img src="https://img.shields.io/badge/Modes-Light%20%7C%20Dark-80e5e7?style=for-the-badge&labelColor=a9d3f5" />
+<img src="https://img.shields.io/badge/Responsive-Yes-ffe680?style=for-the-badge&labelColor=f7a8a3" />
+<img src="https://img.shields.io/badge/UI-Card%20Based-f5a3d1?style=for-the-badge&labelColor=80e5e7" />
+<img src="https://img.shields.io/badge/Design-Clean%20%26%20Modern-a9d3f5?style=for-the-badge&labelColor=ffe680" />
+<img src="https://img.shields.io/badge/Type-Modular-80e5e7?style=for-the-badge&labelColor=f5a3d1" />
+<img src="https://img.shields.io/badge/Made%20By-Madhurima%20Rawat-f7a8a3?style=for-the-badge&labelColor=a9d3f5" />
+</p>
+
 <h2>Website Design</h2>
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 1](website_snapshots/website_1.png)</a>
 
-<a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 2](website_snapshots/website_2.png)</a>
+<div align="center">
+<a href = "https://madhurimarawat.github.io/Portfolio-Website/"><img src="website_snapshots/website_2.png" 
+    title="Portfolio Website Snapshot 2"  alt="Portfolio Website Snapshot 2" height="350px"></a></div>
 
 <a href = "https://madhurimarawat.github.io/Portfolio-Website/">![Portfolio Website Snapshot 3](website_snapshots/website_3.png)</a>
 
